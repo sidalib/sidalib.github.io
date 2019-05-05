@@ -33,7 +33,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby buid && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
