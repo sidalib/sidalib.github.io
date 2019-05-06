@@ -26,29 +26,27 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-        <div
-          style={{
-            fontFamily: "Helvetica",
-            height: "100vh",
-          }}
-        >
-          <main style={{ paddingBottom: "50px" }}>{children}</main>
+        <div>
+          <main>{children}</main>
           <footer
             style={{
-              position: "absolute",
-              bottom: 0,
               backgroundColor: "#001f3f",
               width: "100vw",
-              height: "100px",
-              color: "white",
-              display: "grid",
-              alignItems: "center",
-              justifyItems: "center",
+              height: "10vh",
               padding: 0,
               margin: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <p>
+            <p
+              style={{
+                color: "white",
+                margin: 0,
+                padding: 0,
+              }}
+            >
               © {new Date().getFullYear()}, Built with
               {` `}
               <a
