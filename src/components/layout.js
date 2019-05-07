@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 
-import Header from "./header"
-import "./layout.css"
+import Header from './header'
+import './layout.css'
+import Footer from './Footer'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,39 +29,7 @@ const Layout = ({ children }) => (
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <div>
           <main>{children}</main>
-          <footer
-            style={{
-              backgroundColor: "#001f3f",
-              width: "100vw",
-              height: "10vh",
-              padding: 0,
-              margin: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <p
-              style={{
-                color: "white",
-                margin: 0,
-                padding: 0,
-              }}
-            >
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a
-                style={{
-                  textDecoration: "none",
-                  color: "white",
-                  fontWeight: "bold",
-                }}
-                href="https://www.gatsbyjs.org"
-              >
-                Gatsby
-              </a>
-            </p>
-          </footer>
+          <Footer />
         </div>
       </>
     )}
@@ -68,7 +37,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
