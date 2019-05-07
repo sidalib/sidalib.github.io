@@ -16,7 +16,9 @@ import Footer from './Footer'
 
 const Container = styled.div`
   display: grid;
+  justify-items: center;
   height: 100vh;
+  grid-gap: 4rem 0;
 `
 
 const Layout = ({ children }) => (

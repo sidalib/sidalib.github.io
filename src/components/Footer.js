@@ -11,6 +11,7 @@ const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2);
   p {
     color: white;
     margin: 0;
@@ -26,10 +27,7 @@ const Container = styled.footer`
 const Footer = () => {
   return (
     <Container>
-      <p>
-        © {new Date().getFullYear()}, Built with{' '}
-        <a href='https://www.gatsbyjs.org'>Gatsby</a>
-      </p>
+      <p>© {new Date().getFullYear()}, Sid Bentifraouine</p>
     </Container>
   )
 }
