@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.footer`
+  align-self: end;
   background-color: #001f3f;
   width: 100vw;
   height: 10vh;
@@ -27,7 +28,7 @@ const Footer = () => {
     <Container>
       <p>
         © {new Date().getFullYear()}, Built with{' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href='https://www.gatsbyjs.org'>Gatsby</a>
       </p>
     </Container>
   )

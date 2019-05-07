@@ -1,39 +1,61 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import styled from 'styled-components'
 import Typist from 'react-typist'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
+const Container = styled.div`
+  display: grid;
+  justify-items: center;
+  align-items: center;
+`
+
+const Greetings = styled.div`
+  .Typist {
+    display: block;
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 1em 0em;
+  }
+`
+
+const ImageContainer = styled.div`
+  min-width: 600px;
+  display: grid;
+  margin: 0 auto;
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Home"
-      keywords={[
-        `gatsby`,
-        `application`,
-        `react`,
-        'Sid Bentifraouine',
-        `Sid`,
-        `Ali`,
-        `Bentifraouine`,
-        `Lille`,
-        `France`
-      ]}
+      title='Home'
+      keywords={[`gatsby`, `application`, `react`, 'Sid Bentifraouine']}
     />
-    <div style={{ textAlign: 'center', paddingTop: '100px' }}>
-      <h1>Work in progress... 🔨</h1>
-      <Typist>Hi people I'm Sid</Typist>
-      <p>
-        I'm a Frontend Engineer who loves learning and sharing new things with
-        love 👨‍💻❤️
-      </p>
-      <div style={{ maxWidth: `600px`, display: 'grid', margin: '0 auto' }}>
+    <Container>
+      <Greetings>
+        <Typist
+          className='Greetings'
+          avgTypingDelay={100}
+          cursor={{
+            show: true,
+            blink: true,
+            hideWhenDone: true,
+            hideWhenDoneDelay: 3000
+          }}
+        >
+          Hi, I'm Sid Bentifraouine
+        </Typist>
+        <p>
+          I'm a Frontend Engineer who loves learning and sharing new things with
+          love 👨‍💻❤️
+        </p>
+      </Greetings>
+      <ImageContainer>
         <Image />
-      </div>
-    </div>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
+      </ImageContainer>
+    </Container>
   </Layout>
 )
 
