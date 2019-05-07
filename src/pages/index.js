@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Typist from 'react-typist'
 
 import Layout from '../components/layout'
 import Image from '../components/image'
@@ -23,7 +24,7 @@ const IndexPage = () => (
     />
     <div style={{ textAlign: 'center', paddingTop: '100px' }}>
       <h1>Work in progress... 🔨</h1>
-      <h2>Hi people I'm Sid</h2>
+      <Typist>Hi people I'm Sid</Typist>
       <p>
         I'm a Frontend Engineer who loves learning and sharing new things with
         love 👨‍💻❤️
