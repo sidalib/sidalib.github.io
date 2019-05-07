@@ -22,8 +22,8 @@ const IndexPage = () => (
       ]}
     />
     <div style={{ textAlign: 'center', paddingTop: '100px' }}>
-      <p>Still working on this site... 🔨</p>
-      <h1>Hi people I'm Sid</h1>
+      <h1>Still working on this site... 🔨</h1>
+      <h2>Hi people I'm Sid</h2>
       <p>
         I'm a Frontend Engineer who loves learning and sharing new things with
         love 👨‍💻❤️
