@@ -35,6 +35,7 @@ const Greetings = styled.div`
     color: ${props => props.theme.black};
     display: block;
     font-size: 3rem;
+    font-weight: bold;
     margin: 0.5em 0em;
     line-height: 1.5;
   }
