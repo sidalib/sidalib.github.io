@@ -5,8 +5,7 @@ import { FaWrench, FaHeart } from 'react-icons/fa'
 import { CSSTransition } from 'react-transition-group'
 
 import Layout from '../components/layout'
-// TODO: use this below
-// import Image from '../components/image'
+import Image from '../components/image'
 import SEO from '../components/seo'
 
 const Container = styled.div`
@@ -42,14 +41,19 @@ const Greetings = styled.div`
 `
 
 const ImageContainer = styled.div`
+  min-width: 100%;
+  div {
+    height: 100% !important;
+  }
   img {
     margin: 0 auto;
   }
 `
 
-const Logo = styled.img`
-  margin-top: 2rem;
-  max-width: 100px;
+const LogoWrapper = styled.div`
+  img {
+    max-width: 70px;
+  }
 `
 
 const IndexPage = () => (
@@ -59,11 +63,10 @@ const IndexPage = () => (
       keywords={[`gatsby`, `application`, `react`, 'Sid Bentifraouine']}
     />
     <Container>
-      <small>
-        Work in progress <FaWrench size={13} />
-      </small>
       <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
-        <Logo src={require('../images/sid-logo.png')} />
+        <LogoWrapper>
+          <img src={require('../images/sid-logo.png')} />
+        </LogoWrapper>
       </CSSTransition>
       <Greetings>
         <Typist
@@ -71,6 +74,7 @@ const IndexPage = () => (
           cursor={{
             show: true,
             blink: true,
+            startDelay: 5000,
             hideWhenDone: true,
             hideWhenDoneDelay: 3000
           }}
@@ -84,7 +88,7 @@ const IndexPage = () => (
       </Greetings>
       <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
         <ImageContainer>
-          <img src={require('../images/sid-the-builder.png')} />
+          <Image name='sid-the-builder' />
         </ImageContainer>
       </CSSTransition>
     </Container>

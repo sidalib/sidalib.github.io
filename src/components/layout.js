@@ -16,7 +16,8 @@ import Footer from './Footer'
 
 const theme = {
   white: '#FDFDFF',
-  black: '#393D3F'
+  black: '#393D3F',
+  red: '#BE3A31'
 }
 
 const Container = styled.div`
