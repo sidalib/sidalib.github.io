@@ -8,16 +8,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './header'
 import './layout.css'
 import Footer from './Footer'
 
+const theme = {
+  white: '#FDFDFF',
+  black: '#393D3F'
+}
+
 const Container = styled.div`
   display: grid;
   justify-items: center;
   height: 100vh;
+  width: 100vw;
   grid-gap: 4rem 0;
 `
 
@@ -33,13 +39,13 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <ThemeProvider theme={theme}>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <Container>
           <main>{children}</main>
           <Footer />
         </Container>
-      </>
+      </ThemeProvider>
     )}
   />
 )
