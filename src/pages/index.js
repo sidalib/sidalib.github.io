@@ -53,7 +53,7 @@ const ImageContainer = styled.div`
 
 const LogoWrapper = styled.div`
   img {
-    max-width: 70px;
+    max-width: 100px;
   }
 `
 
@@ -77,7 +77,8 @@ const IndexPage = () => (
             blink: true,
             startDelay: 5000,
             hideWhenDone: true,
-            hideWhenDoneDelay: 3000
+            hideWhenDoneDelay: 3000,
+            element: '_'
           }}
         >
           Hi, I'm Sid
