@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Typist from 'react-typist'
 import { FaWrench, FaHeart } from 'react-icons/fa'
+import { CSSTransition } from 'react-transition-group'
 
 import Layout from '../components/layout'
 // TODO: use this below
@@ -16,6 +17,16 @@ const Container = styled.div`
   padding: 1rem 0;
   @media screen and (max-width: 720px) {
     max-width: 80vw;
+  }
+
+  .balloon-enter,
+  .balloon-appear {
+    opacity: 0;
+  }
+  .balloon-enter-active,
+  .balloon-appear-active {
+    opacity: 1;
+    transition: opacity 2s;
   }
 `
 
@@ -51,7 +62,9 @@ const IndexPage = () => (
       <small>
         Work in progress <FaWrench size={13} />
       </small>
-      <Logo src={require('../images/sid-logo.png')} />
+      <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
+        <Logo src={require('../images/sid-logo.png')} />
+      </CSSTransition>
       <Greetings>
         <Typist
           className='Greetings'
@@ -66,12 +79,14 @@ const IndexPage = () => (
         </Typist>
         <p>
           A Frontend Engineer who loves learning and sharing new things with
-          love. <FaHeart size={25} color='red' />
+          love <FaHeart size={25} color='red' />
         </p>
       </Greetings>
-      <ImageContainer>
-        <img src={require('../images/sid-the-builder.png')} />
-      </ImageContainer>
+      <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
+        <ImageContainer>
+          <img src={require('../images/sid-the-builder.png')} />
+        </ImageContainer>
+      </CSSTransition>
     </Container>
   </Layout>
 )
