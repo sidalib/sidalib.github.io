@@ -61,7 +61,25 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title='Welcome'
-      keywords={[`gatsby`, `application`, `react`, 'Sid Bentifraouine']}
+      keywords={[
+        'gatsby',
+        'application',
+        'react',
+        'sid bentifraouine',
+        'sid ali bentifraouine',
+        'sid',
+        'sid ali',
+        'ali',
+        'frontend',
+        'html',
+        'css',
+        'javascript',
+        'developer',
+        'france',
+        'lille',
+        'paris',
+        'developpeur'
+      ]}
     />
     <Container>
       <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
