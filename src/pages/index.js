@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Typist from 'react-typist'
-import { FaWrench, FaHeart } from 'react-icons/fa'
+import { FaHeart } from 'react-icons/fa'
 import { CSSTransition } from 'react-transition-group'
 
 import Layout from '../components/layout'
@@ -58,7 +58,6 @@ const LogoWrapper = styled.div`
 `
 
 const IndexPage = () => {
-  const [isImageVisible, setisImageVisible] = useState(false)
   return (
     <Layout>
       <SEO
@@ -84,19 +83,9 @@ const IndexPage = () => {
         ]}
       />
       <Container>
-        <CSSTransition
-          classNames='fade'
-          in={isImageVisible}
-          appear
-          timeout={3000}
-        >
+        <CSSTransition classNames='fade' in={true} appear timeout={3000}>
           <LogoWrapper>
-            <img
-              onLoad={() => {
-                setisImageVisible(true)
-              }}
-              src={require('../images/sid-logo.png')}
-            />
+            <img src={require('../images/sid-logo.png')} alt='Logo' />
           </LogoWrapper>
         </CSSTransition>
         <Greetings>

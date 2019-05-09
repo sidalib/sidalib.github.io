@@ -78,7 +78,12 @@ const Footer = () => {
         columnsNumber={Object.getOwnPropertyNames(SOCIAL_LINKS).length - 1}
       >
         {SOCIAL_LINKS.map(social => (
-          <a key={social.url} href={social.url} target='_blank'>
+          <a
+            key={social.url}
+            href={social.url}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <social.icon />
           </a>
         ))}
