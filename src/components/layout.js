@@ -12,7 +12,7 @@ import styled, { ThemeProvider } from 'styled-components'
 
 import Header from './header'
 import './layout.css'
-import Footer from './Footer'
+import Footer from './footer'
 
 const theme = {
   white: '#FDFDFF',

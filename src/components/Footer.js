@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from '@reach/router'
-import { FaLinkedin, FaTwitter, FaDev, FaMedium } from 'react-icons/fa'
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaDev,
+  FaMedium,
+  FaGithub
+} from 'react-icons/fa'
 
 const Container = styled.footer`
   align-self: end;
@@ -27,13 +32,13 @@ const Container = styled.footer`
 
 const SocialLinks = styled.div`
   display: grid;
-  grid-template: none / repeat(4, 1fr);
+  grid-template: none / repeat(${props => props.columnsNumber}, 1fr);
   grid-gap: 0 50px;
   align-items: center;
   justify-items: center;
 
   & > a {
-    transition: 0.5s;
+    transition: all 0.3s ease-out;
     text-decoration: none;
     &:hover {
       transform: scale(1.2);
@@ -42,42 +47,41 @@ const SocialLinks = styled.div`
   }
 `
 
-const ICONS_SIZE = 25
-const SOCIAL_LINKS = {
-  medium: {
+const ICONS_SIZE = 35
+const SOCIAL_LINKS = [
+  {
     url: 'https://medium.com/@sidbentifraouine',
-    color: '#12100E'
+    icon: () => <FaMedium size={ICONS_SIZE} color='#12100E' />
   },
-  twitter: {
+  {
     url: 'https://twitter.com/sbentifraouine',
-    color: '#1E9EED'
+    icon: () => <FaTwitter size={ICONS_SIZE} color='#1E9EED' />
   },
-  linkedin: {
+  {
+    url: 'https://github.com/sidbentifraouine',
+    icon: () => <FaGithub size={ICONS_SIZE} color='#23282E' />
+  },
+  {
     url: 'https://www.linkedin.com/in/sidbentifraouine',
-    color: '#0077B5'
+    icon: () => <FaLinkedin size={ICONS_SIZE} color='#0077B5' />
   },
-  dev: {
+  {
     url: 'https://dev.to/sidbentifraouine',
-    color: '#0D0E0F'
+    icon: () => <FaDev size={ICONS_SIZE} color='#0D0E0F' />
   }
-}
+]
 
 const Footer = () => {
   return (
     <Container>
-      <SocialLinks>
-        <a href={SOCIAL_LINKS.linkedin.url} target='_blank'>
-          <FaLinkedin size={ICONS_SIZE} color={SOCIAL_LINKS.linkedin.color} />
-        </a>
-        <a href={SOCIAL_LINKS.twitter.url} target='_blank'>
-          <FaTwitter size={ICONS_SIZE} color={SOCIAL_LINKS.twitter.color} />
-        </a>
-        <a href={SOCIAL_LINKS.dev.url} target='_blank'>
-          <FaDev size={ICONS_SIZE} color={SOCIAL_LINKS.dev.color} />
-        </a>
-        <a href={SOCIAL_LINKS.medium.url} target='_blank'>
-          <FaMedium size={ICONS_SIZE} color={SOCIAL_LINKS.medium.color} />
-        </a>
+      <SocialLinks
+        columnsNumber={Object.getOwnPropertyNames(SOCIAL_LINKS).length - 1}
+      >
+        {SOCIAL_LINKS.map(social => (
+          <a href={social.url} target='_blank'>
+            <social.icon />
+          </a>
+        ))}
       </SocialLinks>
       <small>© 2019, Sid Bentifraouine</small>
     </Container>

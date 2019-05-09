@@ -76,8 +76,6 @@ const IndexPage = () => (
             show: true,
             blink: true,
             startDelay: 5000,
-            hideWhenDone: true,
-            hideWhenDoneDelay: 3000,
             element: '_'
           }}
         >
