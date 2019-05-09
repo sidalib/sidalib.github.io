@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Typist from 'react-typist'
 import { FaWrench, FaHeart } from 'react-icons/fa'
@@ -18,14 +18,14 @@ const Container = styled.div`
     max-width: 80vw;
   }
 
-  .balloon-enter,
-  .balloon-appear {
+  .fade-enter,
+  .fade-appear {
     opacity: 0;
   }
-  .balloon-enter-active,
-  .balloon-appear-active {
+  .fade-enter-active,
+  .fade-appear-active {
     opacity: 1;
-    transition: opacity 5s;
+    transition: opacity 3000ms;
   }
 `
 
@@ -57,62 +57,73 @@ const LogoWrapper = styled.div`
   }
 `
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      title='Welcome'
-      keywords={[
-        'gatsby',
-        'application',
-        'react',
-        'sid bentifraouine',
-        'sid ali bentifraouine',
-        'sid',
-        'sid ali',
-        'ali',
-        'frontend',
-        'html',
-        'css',
-        'javascript',
-        'developer',
-        'france',
-        'lille',
-        'paris',
-        'developpeur'
-      ]}
-    />
-    <Container>
-      <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
-        <CSSTransition classNames='balloon' in={true} appear timeout={5000}>
+const IndexPage = () => {
+  const [isImageVisible, setisImageVisible] = useState(false)
+  return (
+    <Layout>
+      <SEO
+        title='Welcome'
+        keywords={[
+          'gatsby',
+          'application',
+          'react',
+          'sid bentifraouine',
+          'sid ali bentifraouine',
+          'sid',
+          'sid ali',
+          'ali',
+          'frontend',
+          'html',
+          'css',
+          'javascript',
+          'developer',
+          'france',
+          'lille',
+          'paris',
+          'developpeur'
+        ]}
+      />
+      <Container>
+        <CSSTransition
+          classNames='fade'
+          in={isImageVisible}
+          appear
+          timeout={3000}
+        >
           <LogoWrapper>
-            <img src={require('../images/sid-logo.png')} />
+            <img
+              onLoad={() => {
+                setisImageVisible(true)
+              }}
+              src={require('../images/sid-logo.png')}
+            />
           </LogoWrapper>
         </CSSTransition>
-      </CSSTransition>
-      <Greetings>
-        <Typist
-          className='Greetings'
-          cursor={{
-            show: true,
-            blink: true,
-            startDelay: 5000,
-            element: '_'
-          }}
-        >
-          Hi, I'm Sid
-        </Typist>
-        <p>
-          A Frontend Engineer who loves learning and sharing new things with
-          love <FaHeart size={25} color='red' />
-        </p>
-      </Greetings>
-      <CSSTransition classNames='balloon' in={true} appear timeout={5000}>
-        <ImageContainer>
-          <Image name='sid-the-builder' />
-        </ImageContainer>
-      </CSSTransition>
-    </Container>
-  </Layout>
-)
+        <Greetings>
+          <Typist
+            className='Greetings'
+            cursor={{
+              show: true,
+              blink: true,
+              startDelay: 3000,
+              element: '_'
+            }}
+          >
+            Hi, I'm Sid
+          </Typist>
+          <p>
+            A Frontend Engineer who loves learning and sharing new things with
+            love <FaHeart size={25} color='red' />
+          </p>
+        </Greetings>
+        <CSSTransition classNames='fade' in={true} appear timeout={3000}>
+          <ImageContainer>
+            <Image name='sid-the-builder' />
+          </ImageContainer>
+        </CSSTransition>
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage
