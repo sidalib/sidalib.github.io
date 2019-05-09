@@ -60,7 +60,7 @@ const LogoWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     <SEO
-      title='Home'
+      title='Welcome'
       keywords={[`gatsby`, `application`, `react`, 'Sid Bentifraouine']}
     />
     <Container>
