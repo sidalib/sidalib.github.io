@@ -25,7 +25,7 @@ const Container = styled.div`
   .balloon-enter-active,
   .balloon-appear-active {
     opacity: 1;
-    transition: opacity 2s;
+    transition: opacity 5s;
   }
 `
 
@@ -83,9 +83,11 @@ const IndexPage = () => (
     />
     <Container>
       <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
-        <LogoWrapper>
-          <img src={require('../images/sid-logo.png')} />
-        </LogoWrapper>
+        <CSSTransition classNames='balloon' in={true} appear timeout={5000}>
+          <LogoWrapper>
+            <img src={require('../images/sid-logo.png')} />
+          </LogoWrapper>
+        </CSSTransition>
       </CSSTransition>
       <Greetings>
         <Typist
@@ -104,7 +106,7 @@ const IndexPage = () => (
           love <FaHeart size={25} color='red' />
         </p>
       </Greetings>
-      <CSSTransition classNames='balloon' in={true} appear timeout={2000}>
+      <CSSTransition classNames='balloon' in={true} appear timeout={5000}>
         <ImageContainer>
           <Image name='sid-the-builder' />
         </ImageContainer>
