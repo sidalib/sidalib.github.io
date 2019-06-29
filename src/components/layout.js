@@ -25,6 +25,7 @@ const Container = styled.div`
   justify-items: center;
   grid-gap: 4rem 0;
   width: 100%;
+  height: 100%;
 `
 
 const Layout = ({ children }) => (
