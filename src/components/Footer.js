@@ -11,7 +11,7 @@ import {
 const Container = styled.footer`
   align-self: end;
   background-color: ${props => props.theme.white};
-  width: 100vw;
+  width: 100%;
   padding-top: 1rem;
   margin: 0;
   display: grid;

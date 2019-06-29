@@ -23,9 +23,8 @@ const theme = {
 const Container = styled.div`
   display: grid;
   justify-items: center;
-  height: 100vh;
-  width: 100vw;
   grid-gap: 4rem 0;
+  width: 100%;
 `
 
 const Layout = ({ children }) => (

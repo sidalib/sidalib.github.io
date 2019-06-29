@@ -71,6 +71,7 @@ const IndexPage = () => {
           'sid',
           'sid ali',
           'ali',
+          'bentifraouine',
           'frontend',
           'html',
           'css',
