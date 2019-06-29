@@ -14,6 +14,9 @@ const Container = styled.footer`
   width: 100%;
   padding-top: 1rem;
   margin: 0;
+  position: sticky;
+  bottom: 0;
+  left: 0;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -33,7 +36,7 @@ const Container = styled.footer`
 const SocialLinks = styled.div`
   display: grid;
   grid-template: none / repeat(${props => props.columnsNumber}, 1fr);
-  grid-gap: 0 50px;
+  grid-gap: 0 2rem;
   align-items: center;
   justify-items: center;
 
