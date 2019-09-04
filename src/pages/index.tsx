@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
-import Typist from 'react-typist'
-import { FaHeart } from 'react-icons/fa'
-import { CSSTransition } from 'react-transition-group'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Typist from 'react-typist'
+import { FaHeart, FaBriefcase } from 'react-icons/fa'
+import Image from '../components/Image'
+import Layout from '../components/Layout'
+import SEO from '../components/Seo'
+import { CSSTransition } from 'react-transition-group'
+import Link from '../components/BigLink'
 
 const Container = styled.div`
   display: grid;
   justify-items: center;
   align-items: center;
   max-width: 50vw;
+  grid-row-gap: 1rem;
   padding: 1rem 0;
   @media screen and (max-width: 720px) {
     max-width: 80vw;
@@ -32,7 +34,7 @@ const Container = styled.div`
 const Greetings = styled.div`
   text-align: center;
   .Typist {
-    color: ${props => props.theme.black};
+    color: ${(props) => props.theme.black};
     display: block;
     font-size: 3rem;
     font-weight: bold;
@@ -57,32 +59,11 @@ const LogoWrapper = styled.div`
   }
 `
 
-const IndexPage = () => {
+const IndexPage: FC = () => {
   return (
     <Layout>
-      <SEO
-        title='Welcome'
-        keywords={[
-          'gatsby',
-          'application',
-          'react',
-          'sid bentifraouine',
-          'sid ali bentifraouine',
-          'sid',
-          'sid ali',
-          'ali',
-          'bentifraouine',
-          'frontend',
-          'html',
-          'css',
-          'javascript',
-          'developer',
-          'france',
-          'lille',
-          'paris',
-          'developpeur'
-        ]}
-      />
+      <SEO title='Home Page' />
+
       <Container>
         <CSSTransition classNames='fade' in={true} appear timeout={3000}>
           <LogoWrapper>
@@ -106,9 +87,13 @@ const IndexPage = () => {
             love <FaHeart size={25} color='red' />
           </p>
         </Greetings>
+        <Link to='/resume'>
+          <FaBriefcase />
+          <span style={{ paddingLeft: '.5rem' }}>Hire Me</span>
+        </Link>
         <CSSTransition classNames='fade' in={true} appear timeout={3000}>
           <ImageContainer>
-            <Image name='sid-the-builder' />
+            <Image />
           </ImageContainer>
         </CSSTransition>
       </Container>

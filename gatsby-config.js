@@ -38,6 +38,7 @@ module.exports = {
           families: ['Nunito']
         }
       }
-    }
+    },
+    'gatsby-plugin-typescript'
   ]
 }

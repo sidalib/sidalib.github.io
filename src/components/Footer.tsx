@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
+
 import {
-  FaLinkedin,
-  FaTwitter,
   FaDev,
+  FaGithub,
+  FaLinkedin,
   FaMedium,
-  FaGithub
+  FaTwitter
 } from 'react-icons/fa'
 
 const Container = styled.footer`
   align-self: end;
-  background-color: ${props => props.theme.white};
+  background-color: ${(props) => props.theme.white};
   width: 100%;
   padding-top: 1rem;
   margin: 0;
@@ -22,7 +23,7 @@ const Container = styled.footer`
   justify-items: center;
   grid-row-gap: 0.5rem;
   box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1);
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   p {
     margin: 0;
     padding: 0;
@@ -35,7 +36,10 @@ const Container = styled.footer`
 
 const SocialLinks = styled.div`
   display: grid;
-  grid-template: none / repeat(${props => props.columnsNumber}, 1fr);
+  grid-template: none / repeat(
+      ${(props: { columnsNumber: number }) => props.columnsNumber},
+      1fr
+    );
   grid-gap: 0 2rem;
   align-items: center;
   justify-items: center;
@@ -74,13 +78,13 @@ const SOCIAL_LINKS = [
   }
 ]
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <Container>
       <SocialLinks
         columnsNumber={Object.getOwnPropertyNames(SOCIAL_LINKS).length - 1}
       >
-        {SOCIAL_LINKS.map(social => (
+        {SOCIAL_LINKS.map((social) => (
           <a
             key={social.url}
             href={social.url}

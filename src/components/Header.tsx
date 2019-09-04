@@ -1,8 +1,7 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import React from 'react'
+import React, { FC } from 'react'
+import { Link } from '@reach/router'
 
-const Header = ({ siteTitle }) => (
+const Header: FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -18,7 +17,7 @@ const Header = ({ siteTitle }) => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          to='/'
           style={{
             color: `white`,
             textDecoration: `none`
@@ -30,11 +29,3 @@ const Header = ({ siteTitle }) => (
     </div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-}
-
-Header.defaultProps = {
-  siteTitle: ``
-}
