@@ -9,12 +9,264 @@ import {
   FaAddressCard,
   FaEnvelope,
   FaTwitter,
-  FaCar,
-  FaBackward,
-  FaStepBackward
+  FaCar
 } from 'react-icons/fa'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
+
+const Resume: FC = () => {
+  return (
+    <Layout>
+      <SEO title='Resume' keywords={['cv', 'resume']} />
+      <Container>
+        <Link to='/'>Go Back</Link>
+        <Header>
+          <img src={require('../images/resume-picture.jpg')} alt='logo' />
+          <h2>{resume.intro.name}</h2>
+          <h3>{resume.intro.job}</h3>
+          <hr />
+        </Header>
+        <Content>
+          <Sidebar>
+            <ul>
+              {resume.intro.links.map(({ label, url, hrefPrefix, icon }) => (
+                <li key={url}>
+                  {icon}
+                  {hrefPrefix ? (
+                    <a href={`${hrefPrefix}:${url}`}>{label}</a>
+                  ) : (
+                    <a href={url} target='_blank' rel='noopener noreferrer'>
+                      {label}
+                    </a>
+                  )}
+                </li>
+              ))}
+              <li>
+                {resume.intro.address.icon}
+                <a
+                  href={resume.intro.address.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {resume.intro.address.zipCode && (
+                    <>
+                      {resume.intro.address.zipCode}
+                      <br />
+                    </>
+                  )}
+                  {resume.intro.address.city}, {resume.intro.address.country}
+                </a>
+              </li>
+              <li>
+                <FaCar />
+                <p>Permis B</p>
+              </li>
+            </ul>
+          </Sidebar>
+          <AboutMe>
+            <Section>
+              <h3>Profil</h3>
+              <p>{resume.intro.pitch}</p>
+            </Section>
+            <Section>
+              <h3>Expériences Professionnelles</h3>
+              {resume.experience.map(
+                ({
+                  company,
+                  title,
+                  location: { city, country },
+                  data: { from, to },
+                  description,
+                  projectExamples
+                }) => (
+                  <div key={company}>
+                    <h4>
+                      {title} chez {company}, {city}, {country} — {from}-{to}
+                    </h4>
+                    <p>{description}</p>
+                    <h5>Exemples de projets</h5>
+                    {projectExamples.map(
+                      ({
+                        title: projectTitle,
+                        summary,
+                        actions,
+                        techStack
+                      }) => (
+                        <div key={projectTitle}>
+                          <h5>{projectTitle}</h5>
+                          <p>{summary}</p>
+                          <ul>
+                            {actions.map((actionName) => (
+                              <li key={actionName}>{actionName}</li>
+                            ))}
+                          </ul>
+                          <p>
+                            {techStack.map((techName, index) => (
+                              <span key={techName}>
+                                {techName}
+                                {index !== techStack.length - 1 && ' | '}
+                              </span>
+                            ))}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                )
+              )}
+            </Section>
+            <Education>
+              <h3>Formation</h3>
+              {resume.education.map(
+                ({
+                  school,
+                  location: { city, country },
+                  year,
+                  degree,
+                  distiction
+                }) => (
+                  <div key={year}>
+                    <h4>
+                      {school}, {city}, {country} — {year}
+                    </h4>
+                    <h4>{degree}</h4>
+                    <h5>{distiction}</h5>
+                  </div>
+                )
+              )}
+            </Education>
+            <Abilities>
+              <h3>Compétences</h3>
+              {resume.abilities.map(({ domain, skills }) => (
+                <div key={domain}>
+                  <h4>{domain}</h4>
+                  <p>
+                    {skills.map(({ label, level }: any, index: number) => (
+                      <span key={label}>
+                        {label}
+                        {level && ` (${level})`}
+                        {index !== skills.length - 1 ? `, ` : '.'}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              ))}
+            </Abilities>
+            <Hobbies>
+              <h3>Loisirs</h3>
+              <p>
+                Volontariat avec l’association "Aide aux Orphelins", Dessin
+                & peinture (Imagination), Piano (Autodidacte), Football (Travail
+                d’équipe et Leadership), Randonnée (Aventure), Pêche (Patience),
+                Cyclisme (Persévérance)
+              </p>
+            </Hobbies>
+          </AboutMe>
+        </Content>
+      </Container>
+    </Layout>
+  )
+}
+
+export default Resume
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+  & > a {
+    align-self: flex-start;
+  }
+`
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  hr {
+    width: 10rem;
+    height: 0.1rem;
+    background-color: ${({ theme: { blue } }) => blue};
+    margin-bottom: 1rem;
+  }
+  img {
+    border-radius: 50%;
+    width: 7rem;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: ${({ theme: { blue } }) => blue};
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+`
+
+const Content = styled.div`
+  display: flex;
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+  }
+`
+const Sidebar = styled.div`
+  width: 30vw;
+  font-size: 0.8rem;
+  ul {
+    list-style: none;
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      a {
+        margin-left: 0.7rem;
+        text-decoration: none;
+        color: ${({ theme: { black } }) => black};
+        font-weight: 600;
+      }
+      p {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+`
+const AboutMe = styled.div`
+  width: 70vw;
+  padding: 1rem;
+`
+
+const Section = styled.div`
+  margin-top: 2rem;
+  li {
+    margin: 0;
+  }
+`
+
+const Education = styled.div`
+  margin-top: 2rem;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  div {
+    h4 {
+      margin-bottom: 0.7rem;
+    }
+    h4:nth-of-type(2) {
+      color: ${({ theme: { dimGray } }) => dimGray};
+      font-weight: 600;
+    }
+  }
+`
+
+const Abilities = styled.div`
+  h4 {
+    color: ${({ theme: { blue } }) => blue};
+  }
+`
+const Hobbies = styled.div``
 
 const resume: {
   intro: any
@@ -208,243 +460,3 @@ const resume: {
     }
   ]
 }
-
-const Resume: FC = () => {
-  return (
-    <Layout>
-      <SEO title='Resume' keywords={['cv', 'resume']} />
-      <Container>
-        <Link to='/'>Go Back</Link>
-        <Header>
-          <img src={require('../images/resume-picture.jpg')} alt='logo' />
-          <h1>{resume.intro.name}</h1>
-          <h2>{resume.intro.job}</h2>
-          <hr />
-        </Header>
-        <Content>
-          <Sidebar>
-            <ul>
-              {resume.intro.links.map(({ label, url, hrefPrefix, icon }) => (
-                <li key={url}>
-                  {icon}
-                  {hrefPrefix ? (
-                    <a href={`${hrefPrefix}:${url}`}>{label}</a>
-                  ) : (
-                    <a href={url} target='_blank' rel='noopener noreferrer'>
-                      {label}
-                    </a>
-                  )}
-                </li>
-              ))}
-              <li>
-                {resume.intro.address.icon}
-                <a
-                  href={resume.intro.address.url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  {resume.intro.address.zipCode && (
-                    <>
-                      {resume.intro.address.zipCode}
-                      <br />
-                    </>
-                  )}
-                  {resume.intro.address.city}, {resume.intro.address.country}
-                </a>
-              </li>
-              <li>
-                <FaCar />
-                <p>Permis B</p>
-              </li>
-            </ul>
-          </Sidebar>
-          <AboutMe>
-            <Section>
-              <h3>Profil</h3>
-              <p>{resume.intro.pitch}</p>
-            </Section>
-            <Section>
-              <h3>Expériences Professionnelles</h3>
-              {resume.experience.map(
-                ({
-                  company,
-                  title,
-                  location: { city, country },
-                  data: { from, to },
-                  description,
-                  projectExamples
-                }) => (
-                  <div key={company}>
-                    <h4>
-                      {title} chez {company}, {city}, {country} — {from}-{to}
-                    </h4>
-                    <p>{description}</p>
-                    <h5>Exemples de projets</h5>
-                    {projectExamples.map(
-                      ({
-                        title: projectTitle,
-                        summary,
-                        actions,
-                        techStack
-                      }) => (
-                        <div key={projectTitle}>
-                          <h5>{projectTitle}</h5>
-                          <p>{summary}</p>
-                          <ul>
-                            {actions.map((actionName) => (
-                              <li key={actionName}>{actionName}</li>
-                            ))}
-                          </ul>
-                          <p>
-                            {techStack.map((techName, index) => (
-                              <span key={techName}>
-                                {techName}
-                                {index !== techStack.length - 1 && ' | '}
-                              </span>
-                            ))}
-                          </p>
-                        </div>
-                      )
-                    )}
-                  </div>
-                )
-              )}
-            </Section>
-            <Education>
-              <h3>Formation</h3>
-              {resume.education.map(
-                ({
-                  school,
-                  location: { city, country },
-                  year,
-                  degree,
-                  distiction
-                }) => (
-                  <div key={year}>
-                    <h4>
-                      {school}, {city}, {country} — {year}
-                    </h4>
-                    <h4 style={{ color: '#030209' }}>{degree}</h4>
-                    <h5>{distiction}</h5>
-                  </div>
-                )
-              )}
-            </Education>
-            <Abilities>
-              <h3>Compétences</h3>
-              {resume.abilities.map(({ domain, skills }) => (
-                <div key={domain}>
-                  <h4>{domain}</h4>
-                  <p>
-                    {skills.map(({ label, level }: any, index: number) => (
-                      <span key={label}>
-                        {label}
-                        {level && ` (${level})`}
-                        {index !== skills.length - 1 ? `, ` : '.'}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              ))}
-            </Abilities>
-            <Hobbies>
-              <h3>Loisirs</h3>
-              <p>
-                Volontariat avec l’association "Aide aux Orphelins", Dessin
-                & peinture (Imagination), Piano (Autodidacte), Football (Travail
-                d’équipe et Leadership), Randonnée (Aventure), Pêche (Patience),
-                Cyclisme (Persévérance)
-              </p>
-            </Hobbies>
-          </AboutMe>
-        </Content>
-      </Container>
-    </Layout>
-  )
-}
-
-export default Resume
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  margin: 0;
-  & > a {
-    align-self: flex-start;
-  }
-`
-
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  hr {
-    width: 10rem;
-    height: 0.1rem;
-    background-color: #5f99bd;
-    margin-bottom: 1rem;
-  }
-  img {
-    border-radius: 50%;
-    width: 7rem;
-  }
-  h1 {
-    text-transform: uppercase;
-  }
-  h2 {
-    text-transform: uppercase;
-  }
-`
-
-const Content = styled.div`
-  display: flex;
-`
-const Sidebar = styled.div`
-  width: 30vw;
-  font-size: 0.8rem;
-  ul {
-    list-style: none;
-    li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-      a {
-        margin-left: 0.7rem;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-      }
-      p {
-        margin-left: 0.7rem;
-      }
-    }
-  }
-`
-const AboutMe = styled.div`
-  width: 70vw;
-  padding: 1rem;
-`
-
-const Section = styled.div`
-  margin-top: 2rem;
-  li {
-    margin: 0;
-  }
-`
-
-const Education = styled.div`
-  margin-top: 2rem;
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-`
-
-const Abilities = styled.div`
-  h4 {
-    color: #5f99bd;
-  }
-`
-const Hobbies = styled.div``

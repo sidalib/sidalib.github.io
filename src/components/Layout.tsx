@@ -12,6 +12,45 @@ import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 // import Header from './Header'
 import Footer from './Footer'
 
+const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({
+  children
+}) => (
+  <>
+    <GlobalStyle />
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `}
+      render={(data) => (
+        <ThemeProvider theme={theme}>
+          {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+          <Container>
+            {children}
+            <Footer />
+          </Container>
+        </ThemeProvider>
+      )}
+    />
+  </>
+)
+
+export default Layout
+
+const theme = {
+  white: '#F9FAFB',
+  black: '#212B36',
+  red: '#BE3A31',
+  yellow: '#EEC200',
+  blue: '#006FBB',
+  dimGray: '#454F5B'
+}
+
 const GlobalStyle = createGlobalStyle`
   @import '~react-typist/dist/Typist.css';
   
@@ -24,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fdfdff;
+    background-color: ${theme.white};
   }
   article,
   aside,
@@ -83,8 +122,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0.67em 0;
   }
   mark {
-    background-color: #ff0;
-    color: #000;
+    background-color: ${theme.yellow};
+    color: ${theme.black};
   }
   small {
     font-size: 80%;
@@ -645,44 +684,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = {
-  white: '#FDFDFF',
-  black: '#393D3F',
-  red: '#BE3A31'
-}
-
 const Container = styled.div`
   display: grid;
   justify-items: center;
   grid-gap: 3em 0;
 `
-
-const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({
-  children
-}) => (
-  <>
-    <GlobalStyle />
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={(data) => (
-        <ThemeProvider theme={theme}>
-          {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-          <Container>
-            <main>{children}</main>
-            <Footer />
-          </Container>
-        </ThemeProvider>
-      )}
-    />
-  </>
-)
-
-export default Layout
