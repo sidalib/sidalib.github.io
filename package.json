@@ -16,6 +16,7 @@
     "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-theme-mdx-deck": "^3.0.13",
     "gatsby-transformer-sharp": "^2.3.9",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

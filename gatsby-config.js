@@ -39,6 +39,14 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-typescript'
+    'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-theme-mdx-deck',
+      options: {
+        contentPath: './src/decks',
+        basePath: '/decks'
+        // mdx: false
+      }
+    }
   ]
 }
