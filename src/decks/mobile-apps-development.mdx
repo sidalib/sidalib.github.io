@@ -4,9 +4,9 @@ import wiidiiLogo from '../images/wiidii-logo.png'
 
 # 📱Mobile Apps. Development
 
-<!-- Intro BEGIN-->
-
 ---
+
+<!-- Intro BEGIN-->
 
 ### 🤷‍♀️ Who Am I
 
@@ -61,19 +61,32 @@ import wiidiiLogo from '../images/wiidii-logo.png'
 
 ### 🤷‍♀️ Why this course
 
+Two situations:
+
 - 💼 I want to Find a Job
-- 💰 I want to launch a my own Startup
+- 💰 I've an app idea, and want to create my startup
 
 ---
 
-### 💰 I want to launch a Startup
+### 💰 I want to create a Startup
 
-I've got this wonderful idea about an app that will change the face of the world,here is my todo list:
+<iframe
+  src='https://giphy.com/embed/CTkWFZ1IDvsfS'
+  width='352'
+  height='480'
+  frameBorder='0'
+  class='giphy-embed'
+  allowFullScreen
+></iframe>
+
+---
+
+#### 👷‍♂️ My progression
 
 - ✅ Pitch
 - ✅ Mockups
 - ✅ Conception
-- ❌ Development
+- ❌ Develop that app !
 
 ---
 
@@ -89,7 +102,8 @@ I've got this wonderful idea about an app that will change the face of the world
 - Android: Kotlin & Java
 - iOS: Swift & SwiftUI
 
-**So, I want to have two apps, then I must write one per platform ? 😭**
+  I want to have two apps,
+  then I must write one per platform ? 😭
 
 ---
 
@@ -100,7 +114,7 @@ Let's find out a more pragmatic solution ! 💡
 
 ---
 
-## And the solution is...
+## And the answer is...
 
 ---
 
@@ -112,7 +126,6 @@ Let's find out a more pragmatic solution ! 💡
   - React Native
 
 - **Hybrid**
-
   - Ionic
 
 ---
@@ -132,7 +145,7 @@ Let's find out a more pragmatic solution ! 💡
 
 ### Summary
 
-React Native, Flutter, Ionic ...etc... came to save us 🎉.
+React Native, Flutter, Ionic came to save us 🎉
 
 - Single UI Team
 - Less time coding
@@ -164,7 +177,11 @@ React Native, Flutter, Ionic ...etc... came to save us 🎉.
 
 ## 🤷‍♀️ What is it
 
-[React](https://facebook.github.io/react-native/) lets you create native apps for Android and iOS using React.
+[React](https://facebook.github.io/react-native/) lets you create native apps for:
+
+- Android
+- iOS
+- Even Web
 
 ---
 
@@ -199,38 +216,43 @@ Use [Expo](https://docs.expo.io/versions/latest/)
 
 ### 🤷‍♀️ What is Expo
 
-Expo is a framework and a platform for universal React applications.
-It is a set of tools and services built around React Native and native platforms that help you develop, build, deploy, and quickly iterate on iOS, Android, and web apps from the same JavaScript/TypeScript codebase.
+- Framework and a platform for universal React applications
+- Brings a set of tools built around React Native and native platforms
+  - that help you develop, build, deploy, and quickly iterate
 
 ---
 
 ### 🤷‍♀️ What is Expo
 
-- Expo came to save us it’s evolving to support the “Write once, run anywhere”
-- Avoid touching any native code Just write React
-- I wan’t to add Geoloc and stuff Need to deal with native platforms Android Studion XCdode
-- It gives an abstraction around specic platform behaviours
-
-React Native Team & Expo Team are Very close💞
+- Expo pushes to realize the “Write once, run anywhere” dream
+- Avoid touching native code, just write React
+- No need for configuration when using lower level APIs
+- Gives an abstraction around specic platform behaviours
 
 ---
 
 ### 🧰 Setup
 
 - Install [NodeJS](https://nodejs.org/en/)
-- Install [VSCode](https://code.visualstudio.com/) or any other editor, but trust me, VSCode is dope ! 💪
-- Create an App with [Expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/)
+- Install [VSCode](https://code.visualstudio.com/) or any other editor
+- Create your app with [Expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/)
 - You're ready to go!
+
+```bash
+expo init MyApp
+```
+
+---
 
 ---
 
 ### 🗂 Project Structure
 
-- `node_modules/`: all dependecies reside here
-- `assets/`: app icon, splash screen, images, fonts
-- `App.jsx`: app entry point
-- `app.json`: app configuration, no need to deal with Android Studio and XCode to edit configs 🎉
-- `package.json`: dependencies, and other configs
+- `node_modules/`: dependecies
+- `assets/`: app icon, splash screen, images...
+- `App.jsx`: entry point
+- `app.json`: configuration
+- `package.json`: dependencies listing, and more configs
 
 ---
 
@@ -257,9 +279,10 @@ It's Web vs Native
 
 ---
 
-### 💅 Style
+### 💅 Layout & Style
 
-- CSS Flexbox like syntax
+- [Style](https://docs.expo.io/versions/latest/react-native/style/)
+- Layout with [CSS Flexbox](https://docs.expo.io/versions/latest/react-native/flexbox/)
   - Columns
   - Rows
 
@@ -267,13 +290,13 @@ It's Web vs Native
 
 Everything is a Component
 
-- (Icons](https://docs.expo.io/versions/v36.0.0/guides/icons/)
-- Handling TextInput
-- Handling Touches
-- ScrollView
-- ListView
-- Networking
-- Navigation: third Party: https://reactnavigation.org/
+- [Icons](https://docs.expo.io/versions/v36.0.0/guides/icons/)
+- [Handling TextInput](https://docs.expo.io/versions/latest/react-native/handling-text-input/)
+- [Handling Touches](https://docs.expo.io/versions/latest/react-native/handling-touches/)
+- [ScrollView](https://docs.expo.io/versions/latest/react-native/using-a-scrollview/)
+- [ListView](https://docs.expo.io/versions/latest/react-native/using-a-listview/)
+- [Networking](https://docs.expo.io/versions/latest/react-native/network/)
+- [Navigation with React Navigation](https://reactnavigation.org/): third party library
 
 ---
 
@@ -290,15 +313,21 @@ Everything is a Component
 ## ✅ The Goods (part 2)
 
 - JS Programming Language
-  - Very approachable - C style language
-- Built-in Components - Fast prototyping - Rapid iteration - Not so many third party dependencies
-- The community - Huge community - Almost all your problems are already solved
+  - Very approachable
+  - C style language
+- Built-in Components
+  - Fast prototyping
+  - Rapid iteration
+- The community
+  - Huge community
+  - Many problems already solved by somebody
 
 ---
 
-### 1️⃣ In one sentence
+### In Brief
 
-React Native lets you build Android and iOS with one Code Base, and Expo makes it easier to work with React Native. 🪐⚛️
+- [React Native](https://facebook.github.io/react-native/) lets you build Android and iOS with one Code Base,
+- [Expo](https://docs.expo.io/versions/latest/) makes it easier to work with React Native
 
 ---
 
@@ -406,7 +435,12 @@ Forllow the steps [here](https://flutter.dev/docs/get-started/install)
   - Not everything is required
   - I’m recommending to use **VSCode**, so we don't care if it complain about **Xcode** and **Android Studio**
 - You first project
-  - In your terminal: `flutter create AppName`
+
+  - In your terminal:
+
+  ```bash
+  flutter create AppName
+  ```
 
 ### ⌨️ VSCode Extensions
 
@@ -420,19 +454,18 @@ Forllow the steps [here](https://flutter.dev/docs/get-started/install)
 
 ### 🗂 Project Structure
 
-- `android/` & `ios/`:
+- `android/` & `ios/`: Platfrom specific configuration
 
-  - Configuraction: can be donne with Android Studio and XCode
-  - Native build
+filesui
 
-- `test/`: your Unit & Integration tests
 - `pubspec.yml`:
-  - Lists dependencies, like `package.json` in the JS ecosystem
-  - Registers static assets(images, etc...), included in the final bundle of the app
+  - like `package.json` in the JS ecosystem
+  - registers static assets(images, etc...), included in the final bundle of the app
 
 ### 🟢 Run you App
 
-- In **VSCode**: hit `F5` and here you go
+- Create a Virtual Device in **Android Studio** or plug yours
+- Run it in **VSCode**: hit `F5` and here you go
 - It will **Hot reload** on your changes
   - State of the app is preserved
 
@@ -453,11 +486,12 @@ Most of the widgets have at least one name argument.
 
 ### Stateful Widget
 
+- [Interactive](https://flutter.dev/docs/development/ui/interactive)
 - Has in internal State than can be altered
-  - `setState` to change it, like in **React**
+  - **setState** to change it
 - Has Lifecycle
-  - `initState()`: called when added to the Widgets tree
-  - `dispose()`: called when removed from the Widgets tree
+  - **initState()**: called when added to the app tree
+  - **dispose()**: called when removed from the Widgets tree
 - Implementation
   - State Class
   - Layout Class that extends the State Class
@@ -483,11 +517,11 @@ Most of the widgets have at least one name argument.
 
 ### 💅 Themes
 
-- Material
+- [Material](https://flutter.dev/docs/development/ui/widgets/material)
 
   - Google : `import 'package:flutter/material.dart';`
 
-- Cupertino
+- [Cupertino](https://flutter.dev/docs/development/ui/widgets/cupertino)
 
   - Apple: `import 'package:flutter/cupertino.dart';`
 
@@ -503,16 +537,17 @@ Most of the widgets have at least one name argument.
 
 ### 📱 Layout: SingleChild
 
-- Built-In
-  - `Center`
-  - `Padding`
-  - `Container`: does multiple things at same time
+- [Built-In](https://flutter.dev/docs/development/ui/layout)
+  - Center
+  - Padding
+  - Container: does multiple things at same time
+  - And more...
 
 ---
 
 ### 📱 Layout: Box Decoration
 
-- Apply styles
+- [Box Decoration](https://api.flutter.dev/flutter/painting/BoxDecoration-class.html) is for applying styles
   - Shadows
   - Gradients
   - Change the shape of a `Container` for example
@@ -521,7 +556,7 @@ Most of the widgets have at least one name argument.
 
 ### 📱 Layout: Text
 
-- Text itself
+- [Text](https://api.flutter.dev/flutter/painting/TextStyle-class.html)
 - Style
   - TextStyle
   - Can use `Theme.of` to use theme of context
@@ -533,75 +568,52 @@ Most of the widgets have at least one name argument.
 
 - Interactions
 
-  - Buttons
-  - A lot of built-in Buttons
-
-- GestureDetection
-
-  - Boxes
-  - Take a function that handles it
-  - The lowest level of a button
-  - Inkwell (Material) in between
-  - wrapped around Material give a feeling of click
+  - [Buttons](https://flutter.dev/docs/development/ui/widgets/material#Buttons)
+  - A lot of built-in Buttons utilities
 
 ---
 
 ### 📱 Layout: Flex Layout
 
-- Exactly like CSS Flexbox
+- Exactly like [CSS Flexbox](https://flutter.dev/docs/development/ui/layout)
   - Columns
-  - Top to Bottom
-  - Accepts an Array of children
   - Rows
-  - Left to Right
-  - Accepts an Array of children
-
----
-
-### 📱 Layout: Stacks
-
-- Overlapping Widgets
-  - On top of each other
 
 ---
 
 ### 📱 Layout: Scrollable Views
 
-- ListView
-- ListView.build
-  - For bigger content
-- GridView
+- [ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html)
+  - ListView.build: for larger set of data
+- [GridView](https://api.flutter.dev/flutter/widgets/GridView-class.html)
   - GrivView.count
   - Columns splitting
 
 ---
 
-### 📱 Layout: AnimatedWidgets
-
----
-
-### 📱 Layout: Themes
-
----
-
 ### 🛣 Navigation
 
-- Stack
+- [Here](https://flutter.dev/docs/cookbook/navigation/named-routes) is the principle
+- Stack based
   - Push: forward
   - Pop: backward
 - Use Navigator Class
-- Can also use `PageView`
-  - Easier
+- Can also use `PageView`, which is easier
 
 ---
 
-### ⌨️ Form & TextFormField
+### ⌨️ Forms
+
+- [Form](https://flutter.dev/docs/cookbook/forms/validation)
+- [TextFormField](https://api.flutter.dev/flutter/material/TextFormField-class.html)
+
+---
 
 ### ⏭ Async Widget
 
-- Future
+- [Future](https://api.flutter.dev/flutter/widgets/FutureBuilder-class.html)
   - One Event
-- Stream
+- [Stream](https://api.flutter.dev/flutter/widgets/StreamBuilder-class.html)
   - Multiple Events
   - `stream.cancel()` to avoid Memory Leaks
 
@@ -609,10 +621,9 @@ Most of the widgets have at least one name argument.
 
 ### State Manager
 
-- Buil-in
-- Use a library
-  - `Provider`
-  - Makes it easier to use
+- [Start thinking reactively](https://flutter.dev/docs/development/data-and-backend/state-mgmt/intro)
+- Can use a library
+  - [Provider](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple)
 
 ---
 
@@ -643,17 +654,19 @@ Most of the widgets have at least one name argument.
 
 ## 🤷‍♀️ What is it
 
-#### UI toolkit
+A UI toolkit, to:
 
 - Build mobile and desktop apps
-- Using Web Technologies (HTML,CSS, JS)
+- Using Web Technologies for layout and logic (HTML,CSS, JS)
   - Angular
   - React
   - Vue (Coming soon)
 
 ---
 
-### 🥅 Goal
+### 🥅 Main Goal
+
+Be truly:
 
 - Cross-platform
   - iOS
@@ -662,7 +675,8 @@ Most of the widgets have at least one name argument.
   - PWA
   - Progressive Web App
   - All with one code base
-- Simplicity
+- Simple
+  - By using the Web
 
 ## In Practice
 
@@ -786,15 +800,13 @@ Most of the widgets have at least one name argument.
 
 ---
 
-# 🏗 Now, let's talk about your project
+# 🏗 Now, Your Project
 
 <iframe
-  src='https://giphy.com/embed/W9wHF6yVazlrW'
+  src='https://giphy.com/embed/8FPCEmtFxzk3d6yPaZ'
   width='480'
-  height='271'
+  height='270'
   frameBorder='0'
   class='giphy-embed'
   allowFullScreen
 ></iframe>
-
----
