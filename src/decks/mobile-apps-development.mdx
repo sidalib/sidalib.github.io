@@ -658,9 +658,9 @@ A UI toolkit, to:
 
 - Build mobile and desktop apps
 - Using Web Technologies for layout and logic (HTML,CSS, JS)
-  - Angular
-  - React
-  - Vue (Coming soon)
+  - [React](https://reactjs.org/)
+  - [Angular](https://angular.io/)
+  - [Vue](https://vuejs.org/) (Coming soon)
 
 ---
 
@@ -668,33 +668,39 @@ A UI toolkit, to:
 
 Be truly:
 
-- Cross-platform
+- Cross-platform with one code base
   - iOS
   - Android
   - Desktop
   - PWA
   - Progressive Web App
-  - All with one code base
 - Simple
-  - By using the Web
-
-## In Practice
-
-- Node
-- VSCode or any editor
+  - By using web standards
 
 ---
 
-### Choose a Framework
+### 🧰 Setup
 
-- React
-  - https://ionicframework.com/docs/react/your-first-app
-  - npm install -g ionic@latest
-  - ionic start MyAppName blank
-  - type=react
-- Angular
-  - https://ionicframework.com/docs/angular/your-first-app
-- Vue (coming soon)
+- Install [NodeJS](https://nodejs.org/en/)
+- Install [VSCode](https://code.visualstudio.com/) or any other editor
+
+---
+
+### 🛠 Choose a Framework
+
+- [React flavoured Ionic](https://ionicframework.com/docs/react)
+
+```bash
+npm install -g ionic@latest
+ionic start MyApp blank --type=react
+```
+
+- [Angular flavoured Ionic](https://ionicframework.com/docs/angular/overview)
+
+```bash
+npm install -g ionic native-run cordova-res
+ionic start MyApp tabs --type=angular --capacitor
+```
 
 ---
 
@@ -707,22 +713,22 @@ Be truly:
 
 ---
 
-## Components
+## 📦 Built-in Components
 
-### Tons of them: https://ionicframework.com/docs/components
+Tons of built-in them: https://ionicframework.com/docs/components,
+And you can use regular web elements
 
-- Alert
-- Badge
-- Button
-- Card
-- Checkbox
-- ...
+- [Alert](https://ionicframework.com/docs/api/alert)
+- [Badge](https://ionicframework.com/docs/api/badge)
+- [Button](https://ionicframework.com/docs/api/button)
+- [Card](https://ionicframework.com/docs/api/card)
+- [Checkbox](https://ionicframework.com/docs/api/Checkbox)
 
 ---
 
-### Regular Web
+### 💻 Regular Web Elements
 
-- h1,h2,...,span
+- h1, h2, span...
 - div
 - img
 - ....
@@ -731,44 +737,47 @@ Be truly:
 
 ## Core Concepts
 
+You write your code the way you like
+
 ### UI Components
 
 - Can go custom
   - Use HTML, CSS, JS
 - Use Ionic components
   - They handle Specific platform looking
+- Or both
 
 ---
 
-#### Adaptative Styling
+### 💅 Adaptative Styling
 
-- Ionic components will handle the look or your UI
-  - iOS design language for iOS
-  - Material Design
+By using built-in components: Ionic components will handle the look or your UI
+
+- iOS design language for iOS
+- Material Design
   - Android
   - Web
-  - Still entirely configurable
+- Still entirely configurable
 
 ---
 
-### Navigation
+### 🛣 Navigation
 
-- Mix
-  - Web Navigation
-  - Linear
+Mix of:
+
+- Web Navigation (Linear)
   - Forward
   - Backward
-  - Mobile Navigation
-  - Non-Linear (Parallel)
+- Mobile Navigation (Non-Linear)
+  - Parallell
 
 ---
 
 #### Native Access
 
-- How do I access Native stuff if it just Web
-  - Both iOS and Android provider
-  - Web Views
-  - This is where our apps render
+- Both iOS and Android provider
+- Web Views
+- This is where our apps render
 
 ---
 
