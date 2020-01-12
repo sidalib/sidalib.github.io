@@ -2,7 +2,7 @@
 
 ---
 
-<!-- INTRO -->
+<!-- Intro BEGIN-->
 
 ---
 
@@ -70,11 +70,11 @@
 
 ---
 
-## 🧰 Which SDK should I use
+## 🛠 Which tool should I use
 
 ---
 
-### 🧰 Which SDK should I use
+### 🛠 Which tool should I use
 
 - Platform Specific
 - Cross Platform
@@ -110,28 +110,28 @@ I don't have time to do that.
 
 ### 🪐 Cross Platform
 
-- Hybrid:
-
-  - Ionic
-
-- Native:
+- **Native**
 
   - Flutter
   - React Native
+
+- **Hybrid**
+
+  - Ionic
 
 ---
 
 #### 🤷‍♀️ Why a Cross platform framework
 
-1 code = Android + iOS + Web
-
-🎉
+1 code = Android + iOS + Web 🎉
 
 ---
 
 ## So...
 
 ---
+
+### So...
 
 - I don't need to write multiple apps 📱
 - It will cost much less time and money ⏳💵
@@ -151,21 +151,23 @@ React Native, Flutter, Ionic ...etc... came to save us 🎉.
 - Less time maintaining code
 - Less monies spending
 
+<!-- Intro END-->
+
 ---
 
-## Learn one, Write once, run anywhere ❤️
+# 🏖 Break Time ☕️
 
-<!-- INTRO -->
+---
+
+<!-- React BEGIN-->
 
 # ⚛️ React Native
 
-## ⚛️ React Native
-
 ---
 
-    Introduction
-
 ## 🤷‍♀️ What is it
+
+[React](https://facebook.github.io/react-native/) lets you create native apps for Android and iOS using React.
 
 ---
 
@@ -175,7 +177,7 @@ Facebook
 
 ---
 
-## 👷‍♂️ Who is using it
+## 💻 Who is using it
 
 - Airbnb
 - Tesla
@@ -228,11 +230,11 @@ React Native Team & Expo Team are Very close💞
 
 ---
 
-## 🧰 Configuration
+## 🧰 Setup
 
 ---
 
-### 🧰 Configuration
+### 🧰 Setup
 
 - Install [NodeJS](https://nodejs.org/en/)
 - Install [VSCode](https://code.visualstudio.com/) or any other editor, but trust me, VSCode is dope ! 💪
@@ -306,11 +308,11 @@ Everything is a Component
 
 ---
 
-## ✅ What is good
+## ✅ The Goods
 
 ---
 
-### ✅ What is good
+### ✅ The Goods (part 1)
 
 - Target multiple platforms
 - Single code base
@@ -320,7 +322,7 @@ Everything is a Component
 
 ---
 
-## ✅ What is good
+## ✅ The Goods (part 2)
 
 - JS Programming Language
   - Very approachable - C style language
@@ -333,6 +335,502 @@ Everything is a Component
 
 ---
 
-React Native lets you build Android and iOS with one Code Base, and Expo makes it easier to work with React Native.
+### 1️⃣ In one sentence
 
-<!-- REACT -->
+React Native lets you build Android and iOS with one Code Base, and Expo makes it easier to work with React Native. 🪐⚛️
+
+---
+
+# ⌨️ Demo
+
+<!-- React END -->
+
+---
+
+# 🏖 Break Time ☕️
+
+---
+
+<!-- Flutter BEGIN-->
+
+# 🐦 Flutter
+
+---
+
+## 🤷‍♀️ What is it
+
+Flutter lets develop applications for Android and iOS, as well as being the primary method of creating applications for Google Fuchsia.
+
+---
+
+## 👷‍♂️ Who Created it
+
+Google
+
+---
+
+## 👷‍♂️ Who is using it
+
+- Google Assistant
+- Google Ads
+- Alibaba Group
+- The New York Times
+- Square
+
+---
+
+## 👩‍🏫 The principle
+
+Same as React Native, write once run anywhere.
+
+---
+
+## ✅ The Goods
+
+---
+
+### ✅ The Goods (part 1)
+
+#### ⌨️ Developer Experience
+
+- `Dart` programming language
+  - Very approachable
+  - `C` style language
+  - Amazing developer tooling
+  - Inline documentation
+  - Catch errors before running the app
+- Built-in Widgets
+  - Fast prototyping
+  - Rapid iteration
+  - Not so many third party dependencies
+
+---
+
+### ✅ The Goods (part 2)
+
+#### 🏎 Performance
+
+- `60 FPS` to `120 FPS` Rendering
+- Implements it’s own `C++` Engine
+  - With the `Skia` Library
+  - Gives a blanks canvas to render your own graphics, like a game engine
+- Compilation
+  - **Just in Time**: Good debugging
+  - **Ahead of Time**: Performant
+
+---
+
+## ❌ The Tradeofs
+
+---
+
+### ❌ The Tradeofs
+
+- Small ecosystem
+  - But, grows really fast 🚀
+  - Difficult to find the right packages for your need
+- Not all Specific platform APIs supported
+  - Don’t use it if you have a lot of low level features to handle
+
+---
+
+## 🧰 Setup
+
+---
+
+### 🧰 Setup
+
+Forllow the steps [here](https://flutter.dev/docs/get-started/install)
+
+- Download Flutter, and excract where you want
+- Add it to environment path in order to access the `flutter` command anywhere
+- Run `flutter doctor`
+  - Not everything is required
+  - I’m recommending to use **VSCode**, so we don't care if it complain about **Xcode** and **Android Studio**
+- You first project
+  - In your terminal: `flutter create AppName`
+
+### ⌨️ VSCode Extensions
+
+- Dart
+- Flutter
+- Awesome Flutter Snippets
+- Android iOS Emulator
+  - Makes it easier to switch between Emulated and Plugged In devices
+
+---
+
+## 🗂 Project Structure
+
+---
+
+### 🗂 Project Structure
+
+- `android/` & `ios/`:
+
+  - Configuraction: can be donne with Android Studio and XCode
+  - Native build
+
+- `test/`: your Unit & Integration tests
+- `pubspec.yml`:
+  - Lists dependencies, like `package.json` in the JS ecosystem
+  - Registers static assets(images, etc...), included in the final bundle of the app
+
+### 🟢 Run you App
+
+- In **VSCode**: hit `F5` and here you go
+- It will **Hot reload** on your changes
+  - State of the app is preserved
+
+---
+
+## ⌨️ Widgets
+
+---
+
+## ⌨️ Everything is a Widget
+
+Most of the widgets have at least one name argument.
+
+- Just hover between paratheses to see what you can do it
+  - Awesome `tab` programming
+
+---
+
+## ⌨️ Widgets: Stateful vs Stateless
+
+---
+
+### Stateful
+
+- Has in internal State than can be altered
+  - `setState` to change it, like in **React**
+- Has Lifecycle
+  - `initState()`: called when added to the Widgets tree
+  - `dispose()`: called when removed from the Widgets tree
+- Implementation
+  - State Class
+  - Layout Class that extends the State Class
+
+---
+
+### Stateless
+
+- Immutable
+
+  - No dynamic internal State
+  - Lot of built-in mechanism to trigger UI reloads
+  - Properties defined inside will never change
+
+- Implementation
+
+  - Implement a `build` Method, give it a `context` to say where it lives in the Widgets Tree
+
+- Properties are defined inside the constructor
+  - `key` is used to let flutter know the order and stuff
+
+---
+
+## 💅 Themes
+
+---
+
+### 💅 Themes
+
+- Material
+
+  - Google : `import 'package:flutter/material.dart';`
+
+- Cupertino
+
+  - Apple: `import 'package:flutter/cupertino.dart';`
+
+---
+
+## 📱 Platform Specific
+
+---
+
+### 📱 Platform Specific
+
+- `import 'dart:io' show Platform`;
+- To determine the environment on which you're in
+  - Display based on that manually
+
+---
+
+## 📱 Layout
+
+---
+
+### 📱 Layout: SingleChild
+
+- Built-In
+  - `Center`
+  - `Padding`
+  - `Container`: does multiple things at same time
+
+---
+
+### 📱 Layout: Box Decoration
+
+- Apply styles
+  - Shadows
+  - Gradients
+  - Change the shape of a `Container` for example
+
+---
+
+### 📱 Layout: Text
+
+- Text itself
+- Style
+  - TextStyle
+  - Can use `Theme.of` to use theme of context
+- Handle if text is too long and stuff
+
+---
+
+### 📱 Layout: Gestures and Buttons
+
+- Interactions
+
+  - Buttons
+  - A lot of built-in Buttons
+
+- GestureDetection
+
+  - Boxes
+  - Take a function that handles it
+  - The lowest level of a button
+  - Inkwell (Material) in between
+  - wrapped around Material give a feeling of click
+
+---
+
+### 📱 Layout: Flex Layout
+
+- Exactly like CSS Flexbox
+  - Columns
+  - Top to Bottom
+  - Accepts an Array of children
+  - Rows
+  - Left to Right
+  - Accepts an Array of children
+
+---
+
+### 📱 Layout: Stacks
+
+- Overlapping Widgets
+  - On top of each other
+
+---
+
+### 📱 Layout: Scrollable Views
+
+- ListView
+- ListView.build
+  - For bigger content
+- GridView
+  - GrivView.count
+  - Columns splitting
+
+---
+
+### 📱 Layout: AnimatedWidgets
+
+---
+
+### 📱 Layout: Themes
+
+---
+
+### 🛣 Navigation
+
+- Stack
+  - Push: forward
+  - Pop: backward
+- Use Navigator Class
+- Can also use `PageView`
+  - Easier
+
+---
+
+### ⌨️ Form & TextFormField
+
+### ⏭ Async Widget
+
+- Future
+  - One Event
+- Stream
+  - Multiple Events
+  - `stream.cancel()` to avoid Memory Leaks
+
+---
+
+### State Manager
+
+- Buil-in
+- Use a library
+  - `Provider`
+  - Makes it easier to use
+
+---
+
+# ⌨️ Demo
+
+<!-- Flutter END -->
+
+---
+
+# 🏖 Break Time ☕️
+
+---
+
+<!-- Ionic START -->
+
+# 🌎 Ionic
+
+---
+
+## 🤷‍♀️ What is it
+
+#### UI toolkit
+
+- Build mobile and desktop apps
+- Using Web Technologies (HTML,CSS, JS)
+  - Angular
+  - React
+  - Vue (Coming soon)
+
+---
+
+## 🥅 Goal
+
+---
+
+### 🥅 Goal
+
+- Cross-platform
+  - iOS
+  - Android
+  - Desktop
+  - PWA
+  - Progressive Web App
+  - All with one code base
+- Simplicity
+
+## In Practice
+
+- Node
+- VSCode or any editor
+
+---
+
+### Choose a Framework
+
+- React
+  - https://ionicframework.com/docs/react/your-first-app
+  - npm install -g ionic@latest
+  - ionic start MyAppName blank
+  - type=react
+- Angular
+  - https://ionicframework.com/docs/angular/your-first-app
+- Vue (coming soon)
+
+---
+
+## 🗂 Project Structure
+
+---
+
+### 🗂 Project Structure
+
+- `node_modules/`: you package dependencies
+- `src/`: here goes your code
+- `ionic.config.json`: app configuration
+- `package.json`: depencies listing, other configs
+
+---
+
+## Components
+
+### Tons of them: https://ionicframework.com/docs/components
+
+- Alert
+- Badge
+- Button
+- Card
+- Checkbox
+- ...
+
+---
+
+### Regular Web
+
+- h1,h2,...,span
+- div
+- img
+- ....
+
+---
+
+## Core Concepts
+
+### UI Components
+
+- Can go custom
+  - Use HTML, CSS, JS
+- Use Ionic components
+  - They handle Specific platform looking
+
+---
+
+#### Adaptative Styling
+
+- Ionic components will handle the look or your UI
+  - iOS design language for iOS
+  - Material Design
+  - Android
+  - Web
+  - Still entirely configurable
+
+---
+
+### Navigation
+
+- Mix
+  - Web Navigation
+  - Linear
+  - Forward
+  - Backward
+  - Mobile Navigation
+  - Non-Linear (Parallel)
+
+---
+
+#### Native Access
+
+- How do I access Native stuff if it just Web
+  - Both iOS and Android provider
+  - Web Views
+  - This is where our apps render
+
+---
+
+#### Theming
+
+- Just normal CSS
+
+---
+
+# ⌨️ Demo
+
+<!-- Ionic END -->
+
+---
+
+# 🏖 Break Time ☕️
+
+---
