@@ -721,6 +721,19 @@ ionic start MyApp tabs --type=angular --capacitor
 
 ---
 
+### 🛠 Want to run it on Native Platform
+
+Run it on native platform: [Full steps](https://ionicframework.com/docs/building/android)
+
+```bash
+ionic capacitor add android # Generate the native project
+# Set package id inside `capacitor.config.json` => appId
+ionic capacitor open ios # Make sure it matches inside XCode
+ionic capacitor run ios -l --address=0.0.0.0 # Run it
+```
+
+---
+
 ### 🗂 Project Structure
 
 - `node_modules/`: you package dependencies
