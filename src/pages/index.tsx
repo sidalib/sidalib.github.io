@@ -91,6 +91,10 @@ const IndexPage: FC = () => {
           <FaBriefcase />
           <span style={{ paddingLeft: '.5rem' }}>Hire Me</span>
         </Link>
+        <Link to='/decks'>
+          <FaBriefcase />
+          <span style={{ paddingLeft: '.5rem' }}>Presentations</span>
+        </Link>
         <CSSTransition classNames='fade' in={true} appear timeout={3000}>
           <ImageContainer>
             <Image />
