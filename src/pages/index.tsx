@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import Typist from 'react-typist'
-import { FaHeart, FaBriefcase } from 'react-icons/fa'
+import { FaHeart, FaBriefcase, FaTv } from 'react-icons/fa'
 import Image from '../components/Image'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
@@ -92,7 +92,7 @@ const IndexPage: FC = () => {
           <span style={{ paddingLeft: '.5rem' }}>Hire Me</span>
         </Link>
         <Link to='/decks'>
-          <FaBriefcase />
+          <FaTv />
           <span style={{ paddingLeft: '.5rem' }}>Presentations</span>
         </Link>
         <CSSTransition classNames='fade' in={true} appear timeout={3000}>
