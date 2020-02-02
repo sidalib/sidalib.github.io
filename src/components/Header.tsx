@@ -5,7 +5,7 @@ export default function Header(): ReactElement {
   return (
     <Container>
       <div>
-        <h3>Sid</h3>
+        <h3>Sid Bentifraouine</h3>
       </div>
       <NavBar>
         <ul>
@@ -13,7 +13,7 @@ export default function Header(): ReactElement {
             <a href='#about'>About</a>
           </li>
           <li>
-            <a href='#my-process'>My Process</a>
+            <a href='#skills'>Skills</a>
           </li>
           <li>
             <a href='#contact'>Contact</a>

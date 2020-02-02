@@ -37,7 +37,7 @@ export default function Layout({ children }: Props) {
 }
 
 const Container = styled.div`
-  padding-top: 6rem;
+  padding: 6rem 3rem 0;
 `
 
 const theme = {

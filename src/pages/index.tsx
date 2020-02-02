@@ -38,12 +38,12 @@ export default function LandingPage() {
           </GreetingMessageContainer>
           <HeroImageContainer>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-              <img src={require('../images/imcoding.png')} />
+              <img src={require('../images/illustrations/working.png')} />
             </CSSTransition>
           </HeroImageContainer>
         </GreetingSectionContainer>
         <MyJobSectionContainer>
-          {/* <JobTitle>Frontend Engineer</JobTitle> */}
+          <h2>ABOUT ME</h2>
           <JobDesc>
             My name is <strong>Sid Bentifraouine</strong> and I'm a
             <strong> Frontend Engineer</strong>.<br /> I
@@ -55,18 +55,19 @@ export default function LandingPage() {
             ?<JobLetsTalk>Let's Talk</JobLetsTalk>
           </JobDesc>
         </MyJobSectionContainer>
-        {/* <Link to='/resume'>
-          <span>
-            <FaBriefcase />
-            <span style={{ paddingLeft: '.5rem' }}>Hire Me</span>
-          </span>
-        </Link>
-        <Link to='/decks'>
-          <span>
-            <FaTv />
-            <span style={{ paddingLeft: '.5rem' }}>Presentations</span>
-          </span>
-        </Link> */}
+        <SkillsSectionContainer id='skills'>
+          <div>
+            <img
+              src={require('../images/illustrations/reading.png')}
+              alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
+            />
+          </div>
+        </SkillsSectionContainer>
+        {/* 
+          1. Skills 
+          2. Education
+          3. Hobbies
+        */}
       </Container>
     </Layout>
   )
@@ -75,7 +76,6 @@ export default function LandingPage() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
 
   /* Animations */
   .fade-enter,
@@ -134,13 +134,15 @@ const HeroImageContainer = styled.div`
 
 const MyJobSectionContainer = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 3rem 0;
+  h2 {
+    font-size: 1rem;
+    color: ${(props) => props.theme.secondary};
+  }
 `
 
-const JobTitle = styled.h2`
-  width: 30%;
-`
 const JobDesc = styled.p`
   width: 60%;
   line-height: 2;
@@ -160,4 +162,10 @@ const JobLetsTalk = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: ${(props) => props.theme.borderRadius};
+`
+
+const SkillsSectionContainer = styled.section`
+  img {
+    width: 80%;
+  }
 `
