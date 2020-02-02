@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { ReactElement } from 'react'
 import Link from '../components/BigLink'
 
 import styled from 'styled-components'
@@ -11,10 +11,9 @@ import {
   FaTwitter,
   FaCar
 } from 'react-icons/fa'
-import Layout from '../components/Layout'
-import SEO from '../components/Seo'
+import { Layout, SEO } from '../components'
 
-const Resume: FC = () => {
+export default function ResumePage(): ReactElement {
   return (
     <Layout>
       <SEO title='Resume' keywords={['cv', 'resume']} />
@@ -167,8 +166,6 @@ const Resume: FC = () => {
     </Layout>
   )
 }
-
-export default Resume
 
 const Container = styled.div`
   display: flex;

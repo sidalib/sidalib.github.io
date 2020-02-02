@@ -4,19 +4,14 @@
  *
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
-
-import React, { FC } from 'react'
+import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import Header from './Header'
 
-// import Header from './Header'
-import Footer from './Footer'
-
-const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({
-  children
-}) => (
-  <>
-    <GlobalStyle />
+type Props = { children: JSX.Element | JSX.Element[] }
+export default function Layout({ children }: Props) {
+  return (
     <StaticQuery
       query={graphql`
         query SiteTitleQuery {
@@ -29,42 +24,62 @@ const Layout: FC<{ children: JSX.Element | JSX.Element[] }> = ({
       `}
       render={(data) => (
         <ThemeProvider theme={theme}>
-          {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+          <GlobalStyle />
+          <Header />
           <Container>
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </Container>
         </ThemeProvider>
       )}
     />
-  </>
-)
+  )
+}
 
-export default Layout
+const Container = styled.div`
+  padding-top: 6rem;
+`
 
 const theme = {
-  white: '#F9FAFB',
+  white: '#FFF',
   black: '#212B36',
+  primary: '#0A558C',
+  secondary: '#B6E0FE',
   red: '#BE3A31',
   yellow: '#EEC200',
-  blue: '#006FBB',
-  dimGray: '#454F5B'
+  dimGray: '#454F5B',
+  borderRadius: '4px'
 }
+Object.assign(theme, {
+  boxShadowLight: `0 -1px 2px 0px ${theme.primary}`
+})
 
 const GlobalStyle = createGlobalStyle`
   @import '~react-typist/dist/Typist.css';
+
+  @font-face {
+    font-family: Proxima Nova;
+    src: url('../fonts/proxima_ssv/Proxima-Nova-Regular.otf');
+  }
   
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
-  body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: ${theme.white};
+
+  body {    
+    color: hsla(0, 0%, 0%, 0.8);
+    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif, serif;
+    font-weight: normal;
+    word-wrap: break-word;
+    font-kerning: normal;
+    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   }
+
   article,
   aside,
   details,
@@ -254,18 +269,7 @@ const GlobalStyle = createGlobalStyle`
   }
   *:after {
     box-sizing: inherit;
-  }
-  body {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-family: Arial, Helvetica, sans-serif, serif;
-    font-weight: normal;
-    word-wrap: break-word;
-    font-kerning: normal;
-    -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-    font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  }
+  }  
   img {
     max-width: 100%;
     margin-left: 0;
@@ -287,7 +291,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -304,7 +308,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -321,7 +325,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -338,7 +342,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -355,7 +359,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -372,7 +376,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -677,15 +681,4 @@ const GlobalStyle = createGlobalStyle`
       font-size: 100%;
     }
   }
-
-  * {
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-`
-
-const Container = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-gap: 3em 0;
 `

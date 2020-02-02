@@ -1,31 +1,54 @@
-import React, { FC } from 'react'
-import { Link } from '@reach/router'
+import React, { ReactElement, useEffect } from 'react'
+import styled from 'styled-components'
 
-const Header: FC<{ siteTitle: string }> = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to='/'
-          style={{
-            color: `white`,
-            textDecoration: `none`
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+export default function Header(): ReactElement {
+  return (
+    <Container>
+      <div>
+        <h3>Sid</h3>
+      </div>
+      <NavBar>
+        <ul>
+          <li>
+            <a href='#about'>About</a>
+          </li>
+          <li>
+            <a href='#my-process'>My Process</a>
+          </li>
+          <li>
+            <a href='#contact'>Contact</a>
+          </li>
+        </ul>
+      </NavBar>
+    </Container>
+  )
+}
+
+const Container = styled.header`
+  padding: 2rem 2rem 1rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${(props) => props.theme.white};
+  box-shadow: ${(props) => props.theme.boxShadowLight};
+`
+
+const NavBar = styled.nav`
+  display: flex;
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin: 0 1rem;
+      a {
+        color: ${(props) => props.theme.black};
+        text-decoration: none;
+      }
+    }
+  }
+`
