@@ -4,16 +4,17 @@ import styled from 'styled-components'
 export default function Header(): ReactElement {
   return (
     <Container>
-      <div>
-        <h3>Sid Bentifraouine</h3>
-      </div>
+      <h3>Sid</h3>
       <NavBar>
         <ul>
           <li>
-            <a href='#about'>About</a>
+            <a href='#who-am-i'>Who am I</a>
           </li>
           <li>
-            <a href='#skills'>Skills</a>
+            <a href='#my-skills'>My Skills</a>
+          </li>
+          <li>
+            <a href='#bonus'>Bonus</a>
           </li>
           <li>
             <a href='#contact'>Contact</a>

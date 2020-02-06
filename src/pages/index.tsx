@@ -10,7 +10,7 @@ export default function LandingPage() {
     <Layout>
       <SEO title='Welcome !' />
       <Container>
-        <GreetingSectionContainer>
+        <GreetingSection>
           <GreetingMessageContainer>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
               <GreetingMessage>
@@ -38,31 +38,93 @@ export default function LandingPage() {
           </GreetingMessageContainer>
           <HeroImageContainer>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
+              {/* TODO: add alt */}
               <img src={require('../images/illustrations/working.png')} />
             </CSSTransition>
           </HeroImageContainer>
-        </GreetingSectionContainer>
-        <MyJobSectionContainer>
+        </GreetingSection>
+        <WhoAmISection id='who-am-i'>
           <h2>ABOUT ME</h2>
-          <JobDesc>
+          <WhoAmIDescription>
             My name is <strong>Sid Bentifraouine</strong> and I'm a
             <strong> Frontend Engineer</strong>.<br /> I
             <strong> Design </strong>+<strong> Code</strong>:
             <strong> Web </strong>+<strong> Mobile </strong>
             Applications.
             <br />
-            <br /> You need help with you React, React Native. Or UX/UI advices
-            ?<JobLetsTalk>Let's Talk</JobLetsTalk>
-          </JobDesc>
-        </MyJobSectionContainer>
-        <SkillsSectionContainer id='skills'>
-          <div>
-            <img
-              src={require('../images/illustrations/reading.png')}
-              alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
-            />
-          </div>
-        </SkillsSectionContainer>
+            <br /> You need help with you <strong>React</strong>,
+            <strong> React Native</strong> application ? Or <strong>UX</strong>{' '}
+            & <strong>UI</strong> advices ?<LetsTalk>Let's Talk</LetsTalk>
+          </WhoAmIDescription>
+        </WhoAmISection>
+        <SkillsSection id='my-skills'>
+          <MyStory>
+            {/* TODO: use div and p */}
+
+            <h3>My Story</h3>
+            <div>
+              <p>
+                <br />
+                <br />
+                I drew alot <br />
+                first professional experience: i felt in love with web
+                developpement with my first experience with angular
+                <br />
+                <br />
+                I started watching online courses, reading books, since then,
+                nothing has changed.
+                <br />
+                <br />
+                Everyday of my life, i'm making sure that I'm alway up to date
+                in order to be a game changer in my daily work and also on my
+                side projects.
+                <br />
+                <br />
+                Really rigourous with my daily routing, I'm alway improving my
+                rituals, wake up early, learn, sport, work, repeat.
+              </p>
+            </div>
+            <IllustrationImageContainer>
+              <img
+                src={require('../images/illustrations/reading.png')}
+                alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
+              />
+            </IllustrationImageContainer>
+            <p>
+              first professional experience: i felt in love with web
+              developpement with my first experience with angular
+              <br />
+              <br />
+              I started watching online courses, reading books, since then,
+              nothing has changed.
+              <br />
+              <br />
+              Everyday of my life, i'm making sure that I'm alway up to date in
+              order to be a game changer in my daily work and also on my side
+              projects.
+              <br />
+              <br />
+              Really rigourous with my daily routing, I'm alway improving my
+              rituals, wake up early, learn, sport, work, repeat.
+            </p>
+          </MyStory>
+          <WhatAreMySkills>
+            {/* TODO: add alt */}
+            <IllustrationImageContainer>
+              <img
+                src={require('../images/illustrations/cooking.png')}
+                alt=''
+              />
+            </IllustrationImageContainer>
+            <TechStackDesc>
+              <p>I use only dope technologies</p>
+              <p>I use only dope technologies</p>
+              <p>I use only dope technologies</p>
+              <p>I use only dope technologies</p>
+              <p>I use only dope technologies</p>
+            </TechStackDesc>
+          </WhatAreMySkills>
+        </SkillsSection>
         {/* 
           1. Skills 
           2. Education
@@ -76,6 +138,10 @@ export default function LandingPage() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  img {
+    animation: float 6s ease-in-out infinite;
+  }
 
   /* Animations */
   .fade-enter,
@@ -101,13 +167,16 @@ const Container = styled.div`
   }
 `
 
-const GreetingSectionContainer = styled.section`
+const GreetingSection = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 0rem 1rem;
+  @media screen {
+  }
 `
 const GreetingMessageContainer = styled.div`
-  width: 30%;
+  margin: 2rem 0;
 `
 const GreetingMessage = styled.div`
   h1,
@@ -129,43 +198,65 @@ const GreetingMessage = styled.div`
 `
 const HeroImageContainer = styled.div`
   width: 70%;
-  animation: float 6s ease-in-out infinite;
 `
 
-const MyJobSectionContainer = styled.section`
+const WhoAmISection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 3rem 0;
+  align-items: center;
+  padding: 3rem 0;
   h2 {
     font-size: 1rem;
     color: ${(props) => props.theme.secondary};
   }
 `
 
-const JobDesc = styled.p`
-  width: 60%;
-  line-height: 2;
+const WhoAmIDescription = styled.p`
   color: ${(props) => props.theme.dimGray};
   font-weight: 100;
   strong {
     color: ${(props) => props.theme.primary};
   }
 `
-const JobLetsTalk = styled.a`
+const LetsTalk = styled.a`
   display: block;
   margin: 1rem 0;
   font-weight: bold;
   background-color: ${(props) => props.theme.secondary};
   width: 100px;
+  align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: ${(props) => props.theme.borderRadius};
+  padding: 0.5rem 0.5rem;
 `
 
-const SkillsSectionContainer = styled.section`
+const SkillsSection = styled.section``
+
+const MyStory = styled.div`
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  p {
+  }
   img {
-    width: 80%;
+  }
+`
+
+const WhatAreMySkills = styled.div`
+  padding: 6rem 0;
+  display: flex;
+`
+const TechStackDesc = styled.div`
+  width: 40%;
+`
+const IllustrationImageContainer = styled.div`
+  width: 100%;
+  img {
+    height: auto;
+    width: auto;
   }
 `
