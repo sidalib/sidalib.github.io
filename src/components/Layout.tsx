@@ -44,8 +44,8 @@ const Container = styled.div`
 const theme = {
   white: '#FFF',
   black: '#212B36',
-  primary: '#0A558C',
-  secondary: '#B6E0FE',
+  primary: '#102635',
+  secondary: '#26b4fd',
   red: '#BE3A31',
   yellow: '#EEC200',
   dimGray: '#454F5B',

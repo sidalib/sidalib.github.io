@@ -65,7 +65,9 @@ export default () => {
                 <strong> React Native</strong> application ? Or
                 <strong> UX</strong> & <strong>UI</strong> advices ?
               </p>
-              <LetsTalkLink>Let's Talk</LetsTalkLink>
+              <LetsTalkLink href='mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!'>
+                Let's Talk
+              </LetsTalkLink>
             </SectionDescription>
           </Section>
 
@@ -201,13 +203,24 @@ const SectionDescription = styled.p`
 const LetsTalkLink = styled.a`
   display: block;
   margin: 1rem auto;
-  font-weight: bold;
-  background-color: ${(props) => props.theme.secondary};
   width: 100px;
+  padding: 0.5rem 0.5rem;
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${(props) => props.theme.secondary};
+  color: ${(props) => props.theme.white};
+  text-decoration: none;
+  font-weight: bold;
   border-radius: ${(props) => props.theme.borderRadius};
-  padding: 0.5rem 0.5rem;
+  box-shadow: 0 3px ${(props) => props.theme.primary};
+  transition: all 0.1s ease-in-out;
+  :hover {
+    cursor: pointer;
+  }
+  :active {
+    transform: translateY(3px);
+    box-shadow: 0 0;
+  }
 `
