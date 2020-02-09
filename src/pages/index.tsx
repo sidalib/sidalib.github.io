@@ -39,7 +39,7 @@ export default function LandingPage() {
             </SectionDescription>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
               <Image
-                src={require('../images/illustrations/working.png')}
+                src={require('../images/illustrations/coding.svg')}
                 alt='Low fidelity illustration of Sid as he is working on his desk and smiling.'
               />
             </CSSTransition>
@@ -71,7 +71,7 @@ export default function LandingPage() {
           <Section>
             <SectionTitle>Tech' Stack</SectionTitle>
             <Image
-              src={require('../images/illustrations/cooking.png')}
+              src={require('../images/illustrations/cooking.svg')}
               alt='Cooking an app with multiple technologies'
             />
             <SectionDescription>
@@ -102,7 +102,7 @@ export default function LandingPage() {
               </p>
             </SectionDescription>
             <Image
-              src={require('../images/illustrations/reading.png')}
+              src={require('../images/illustrations/reading.svg')}
               alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
             />
             <SectionDescription>
