@@ -4,7 +4,11 @@ import { CSSTransition } from 'react-transition-group'
 import Typist from 'react-typist'
 import { Layout, SEO } from '../components'
 
-export default function LandingPage() {
+/* TODO: 
+  1- add img alts
+  2- remove WIP
+*/
+export default () => {
   return (
     <Fragment>
       <SEO title='Welcome !' />
@@ -12,35 +16,33 @@ export default function LandingPage() {
         <Container>
           <Section>
             <h1 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h1>
-            <SectionDescription>
-              <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-                <GreetingsMessage>
-                  <h1>Hi,</h1>
-                  <Typist
-                    className='Typist'
-                    startDelay={500}
-                    cursor={{
-                      show: true,
-                      element: ''
-                    }}
-                  >
-                    I'm Sid .B
-                  </Typist>
-                  <CSSTransition
-                    classNames='fade'
-                    in={true}
-                    appear
-                    timeout={5000}
-                  >
-                    <h3>Frontend Engineer</h3>
-                  </CSSTransition>
-                </GreetingsMessage>
-              </CSSTransition>
-            </SectionDescription>
+            <CSSTransition classNames='fade' in={true} appear timeout={3000}>
+              <GreetingsContainer>
+                <h1>Hi,</h1>
+                <Typist
+                  className='Typist'
+                  startDelay={500}
+                  cursor={{
+                    show: true,
+                    element: ''
+                  }}
+                >
+                  I'm Sid
+                </Typist>
+                <CSSTransition
+                  classNames='fade'
+                  in={true}
+                  appear
+                  timeout={5000}
+                >
+                  <h3>Frontend Engineer</h3>
+                </CSSTransition>
+              </GreetingsContainer>
+            </CSSTransition>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
               <Image
                 src={require('../images/illustrations/coding.svg')}
-                alt='Low fidelity illustration of Sid as he is working on his desk and smiling.'
+                alt=''
               />
             </CSSTransition>
           </Section>
@@ -67,59 +69,51 @@ export default function LandingPage() {
             </SectionDescription>
           </Section>
 
-          {/* Tech Stack Section */}
           <Section>
-            <SectionTitle>Tech' Stack</SectionTitle>
+            <SectionTitle>Aliqua id</SectionTitle>
             <Image
               src={require('../images/illustrations/cooking.svg')}
               alt='Cooking an app with multiple technologies'
             />
             <SectionDescription>
-              <p>I use only dope technologies</p>
+              Reprehenderit est elit pariatur enim dolore adipisicing incididunt
+              qui et. Elit nulla Lorem deserunt elit. Consequat pariatur dolore
+              commodo minim nulla exercitation aute aute ad enim ad. Et id dolor
+              eiusmod minim sit aliqua aute eu tempor.
             </SectionDescription>
           </Section>
 
-          {/* About Me */}
-          <Section id='about-me'>
-            <SectionTitle>My Story</SectionTitle>
+          <Section>
+            <SectionTitle>Sit aliquip</SectionTitle>
             <SectionDescription>
-              <p>
-                I drew alot first professional experience: i felt in love with
-                web developpement with my first experience with angular
-              </p>
-              <p>
-                I started watching online courses, reading books, since then,
-                nothing has changed.
-              </p>
-              <p>
-                Everyday of my life, i'm making sure that I'm alway up to date
-                in order to be a game changer in my daily work and also on my
-                side projects.
-              </p>
-              <p>
-                Really rigourous with my daily routing, I'm alway improving my
-                rituals, wake up early, learn, sport, work, repeat.
-              </p>
+              Ipsum aliquip culpa tempor anim sunt duis reprehenderit do officia
+              cupidatat amet commodo. Adipisicing consequat est aliqua nostrud
+              non. Nostrud veniam velit cupidatat ex. Officia aliqua esse minim
+              anim. Incididunt pariatur cupidatat amet sit dolore id anim
+              deserunt sit aliqua duis adipisicing.{' '}
             </SectionDescription>
             <Image
               src={require('../images/illustrations/reading.svg')}
               alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
             />
             <SectionDescription>
-              <p>
-                first professional experience: i felt in love with web
-                developpement with my first experience with angular
-              </p>
-              <p>
-                I started watching online courses, reading books, since then,
-                nothing has changed.
-              </p>
-              <p>
-                Everyday of my life, i'm making sure that I'm alway up to date
-                in order to be a game changer in my daily work and also on my
-                side projects. Really rigourous with my daily routing, I'm alway
-                improving my rituals, wake up early, learn, sport, work, repeat.
-              </p>
+              Anim commodo proident veniam laboris laboris sint laborum commodo.
+              Nisi eu labore nulla eu eu nulla eiusmod nisi aliquip
+              exercitation. Est non dolore anim anim commodo mollit incididunt
+              sunt mollit.
+            </SectionDescription>
+          </Section>
+
+          <Section>
+            <SectionTitle>Eiusmod et qui</SectionTitle>
+            <Image
+              src={require('../images/illustrations/bjj.svg')}
+              alt='Sid is doing some BJJ'
+            />
+            <SectionDescription>
+              Consectetur nostrud magna ullamco labore in proident. Consectetur
+              dolore anim ex cupidatat amet ea ea Lorem dolor veniam labore
+              magna. Enim aliqua eiusmod proident ex duis dolore duis.
             </SectionDescription>
           </Section>
         </Container>
@@ -132,6 +126,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media all and (min-width: 768px) {
+    padding: 0 20vw;
+  }
+
   /* Animations */
   .fade-enter,
   .fade-appear {
@@ -142,21 +140,10 @@ const Container = styled.div`
     opacity: 1;
     transition: opacity 3000ms;
   }
-
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(-10px);
-    }
-    100% {
-      transform: translatey(0px);
-    }
-  }
 `
 
-const GreetingsMessage = styled.div`
+const GreetingsContainer = styled.div`
+  margin: 5rem;
   h1,
   .Typist {
     color: ${(props) => props.theme.black};
@@ -172,10 +159,22 @@ const GreetingsMessage = styled.div`
   h3 {
     line-height: 0;
     color: ${(props) => props.theme.secondary};
+    text-align: center;
   }
 `
 
 const Image = styled.img`
+  @keyframes float {
+    0% {
+      transform: translatey(0);
+    }
+    50% {
+      transform: translatey(-0.5rem);
+    }
+    100% {
+      transform: translatey(0);
+    }
+  }
   animation: float 6s ease-in-out infinite;
 `
 
