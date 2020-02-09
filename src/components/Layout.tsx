@@ -8,6 +8,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import Header from './Header'
+import Footer from './Footer'
 
 type Props = { children: JSX.Element | JSX.Element[] }
 export default function Layout({ children }: Props) {
@@ -28,7 +29,7 @@ export default function Layout({ children }: Props) {
           {/* <Header /> */}
           <Container>
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </Container>
         </ThemeProvider>
       )}
@@ -37,7 +38,7 @@ export default function Layout({ children }: Props) {
 }
 
 const Container = styled.div`
-  padding: 3rem 1rem;
+  padding: 0;
 `
 
 const theme = {

@@ -9,20 +9,58 @@ import {
   FaTwitter
 } from 'react-icons/fa'
 
+const ICONS_SIZE = 35
+const SOCIAL_LINKS = [
+  {
+    url: 'https://medium.com/@sidbentifraouine',
+    icon: () => <FaMedium size={ICONS_SIZE} color='#12100E' />
+  },
+  {
+    url: 'https://twitter.com/sbentifraouine',
+    icon: () => <FaTwitter size={ICONS_SIZE} color='#1E9EED' />
+  },
+  {
+    url: 'https://github.com/sidbentifraouine',
+    icon: () => <FaGithub size={ICONS_SIZE} color='#23282E' />
+  },
+  {
+    url: 'https://www.linkedin.com/in/sidbentifraouine',
+    icon: () => <FaLinkedin size={ICONS_SIZE} color='#0077B5' />
+  }
+  // {
+  //   url: 'https://dev.to/sidbentifraouine',
+  //   icon: () => <FaDev size={ICONS_SIZE} color='#0D0E0F' />
+  // }
+]
+
+export default () => {
+  return (
+    <Container>
+      <SocialLinks
+        columnsNumber={Object.getOwnPropertyNames(SOCIAL_LINKS).length - 1}
+      >
+        {SOCIAL_LINKS.map((social) => (
+          <a
+            key={social.url}
+            href={social.url}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <social.icon />
+          </a>
+        ))}
+      </SocialLinks>
+      <small>© 2019, Sid Bentifraouine</small>
+    </Container>
+  )
+}
+
 const Container = styled.footer`
-  align-self: end;
-  background-color: ${(props) => props.theme.white};
-  width: 100%;
   padding-top: 1rem;
-  margin: 0;
-  position: sticky;
-  bottom: 0;
-  left: 0;
   display: grid;
   align-items: center;
   justify-items: center;
   grid-row-gap: 0.5rem;
-  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1);
   color: ${(props) => props.theme.black};
   p {
     margin: 0;
@@ -53,51 +91,3 @@ const SocialLinks = styled.div`
     }
   }
 `
-
-const ICONS_SIZE = 35
-const SOCIAL_LINKS = [
-  {
-    url: 'https://medium.com/@sidbentifraouine',
-    icon: () => <FaMedium size={ICONS_SIZE} color='#12100E' />
-  },
-  {
-    url: 'https://twitter.com/sbentifraouine',
-    icon: () => <FaTwitter size={ICONS_SIZE} color='#1E9EED' />
-  },
-  {
-    url: 'https://github.com/sidbentifraouine',
-    icon: () => <FaGithub size={ICONS_SIZE} color='#23282E' />
-  },
-  {
-    url: 'https://www.linkedin.com/in/sidbentifraouine',
-    icon: () => <FaLinkedin size={ICONS_SIZE} color='#0077B5' />
-  },
-  {
-    url: 'https://dev.to/sidbentifraouine',
-    icon: () => <FaDev size={ICONS_SIZE} color='#0D0E0F' />
-  }
-]
-
-const Footer: FC = () => {
-  return (
-    <Container>
-      <SocialLinks
-        columnsNumber={Object.getOwnPropertyNames(SOCIAL_LINKS).length - 1}
-      >
-        {SOCIAL_LINKS.map((social) => (
-          <a
-            key={social.url}
-            href={social.url}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <social.icon />
-          </a>
-        ))}
-      </SocialLinks>
-      <small>© 2019, Sid Bentifraouine</small>
-    </Container>
-  )
-}
-
-export default Footer

@@ -155,6 +155,25 @@ const Container = styled.div`
   }
 `
 
+const GreetingsMessage = styled.div`
+  h1,
+  .Typist {
+    color: ${(props) => props.theme.black};
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .Typist {
+    color: ${(props) => props.theme.primary};
+    margin-left: 0.5rem;
+  }
+  h3 {
+    line-height: 0;
+    color: ${(props) => props.theme.secondary};
+  }
+`
+
 const Image = styled.img`
   animation: float 6s ease-in-out infinite;
 `
@@ -174,34 +193,14 @@ const SectionTitle = styled.h3`
 
 const SectionDescription = styled.p`
   color: ${(props) => props.theme.dimGray};
-  font-weight: 100;
   strong {
     color: ${(props) => props.theme.primary};
   }
 `
 
-const GreetingsMessage = styled.div`
-  h1,
-  .Typist {
-    color: ${(props) => props.theme.black};
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1;
-  }
-  .Typist {
-    color: ${(props) => props.theme.primary};
-    margin-left: 0.5rem;
-  }
-  h3 {
-    line-height: 0;
-    color: ${(props) => props.theme.secondary};
-  }
-`
-
 const LetsTalkLink = styled.a`
   display: block;
-  margin: 1rem 0;
+  margin: 1rem auto;
   font-weight: bold;
   background-color: ${(props) => props.theme.secondary};
   width: 100px;
