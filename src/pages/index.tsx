@@ -1,147 +1,135 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
 import Typist from 'react-typist'
 import { Layout, SEO } from '../components'
-import { FaArrowRight, FaPlus, FaCross, FaTimes } from 'react-icons/fa'
 
 export default function LandingPage() {
   return (
-    <Layout>
+    <Fragment>
       <SEO title='Welcome !' />
-      <Container>
-        <GreetingSection>
-          <GreetingMessageContainer>
+      <Layout>
+        <Container>
+          <Section>
+            <SectionDescription>
+              <CSSTransition classNames='fade' in={true} appear timeout={3000}>
+                <GreetingsMessage>
+                  <h1>Hi,</h1>
+                  <Typist
+                    className='Typist'
+                    startDelay={500}
+                    cursor={{
+                      show: true,
+                      element: ''
+                    }}
+                  >
+                    I'm Sid .B
+                  </Typist>
+                  <CSSTransition
+                    classNames='fade'
+                    in={true}
+                    appear
+                    timeout={5000}
+                  >
+                    <h3>Frontend Engineer</h3>
+                  </CSSTransition>
+                </GreetingsMessage>
+              </CSSTransition>
+            </SectionDescription>
             <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-              <GreetingMessage>
-                <h1>Hi,</h1>
-                <Typist
-                  className='Typist'
-                  startDelay={500}
-                  cursor={{
-                    show: true,
-                    element: ''
-                  }}
-                >
-                  I'm Sid .B
-                </Typist>
-                <CSSTransition
-                  classNames='fade'
-                  in={true}
-                  appear
-                  timeout={5000}
-                >
-                  <h3>Frontend Engineer</h3>
-                </CSSTransition>
-              </GreetingMessage>
+              <Image
+                src={require('../images/illustrations/working.png')}
+                alt='Low fidelity illustration of Sid as he is working on his desk and smiling.'
+              />
             </CSSTransition>
-          </GreetingMessageContainer>
-          <HeroImageContainer>
-            <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-              {/* TODO: add alt */}
-              <img src={require('../images/illustrations/working.png')} />
-            </CSSTransition>
-          </HeroImageContainer>
-        </GreetingSection>
-        <WhoAmISection id='who-am-i'>
-          <h2>ABOUT ME</h2>
-          <WhoAmIDescription>
-            My name is <strong>Sid Bentifraouine</strong> and I'm a
-            <strong> Frontend Engineer</strong>.<br /> I
-            <strong> Design </strong>+<strong> Code</strong>:
-            <strong> Web </strong>+<strong> Mobile </strong>
-            Applications.
-            <br />
-            <br /> You need help with you <strong>React</strong>,
-            <strong> React Native</strong> application ? Or <strong>UX</strong>{' '}
-            & <strong>UI</strong> advices ?<LetsTalk>Let's Talk</LetsTalk>
-          </WhoAmIDescription>
-        </WhoAmISection>
-        <SkillsSection id='my-skills'>
-          <MyStory>
-            {/* TODO: use div and p */}
+          </Section>
 
-            <h3>My Story</h3>
-            <div>
+          {/* My Job */}
+          <Section id='my-job'>
+            <SectionTitle>My Job</SectionTitle>
+            <SectionDescription>
               <p>
-                <br />
-                <br />
-                I drew alot <br />
-                first professional experience: i felt in love with web
-                developpement with my first experience with angular
-                <br />
-                <br />
+                My name is <strong>Sid Bentifraouine</strong> and I'm a
+                <strong> Frontend Engineer</strong>.
+              </p>
+              <p>
+                I<strong> Design </strong>+<strong> Code</strong>:
+                <strong> Web </strong>+<strong> Mobile </strong>
+                Applications.
+              </p>
+              <p>
+                You need help with you <strong>React</strong>,
+                <strong> React Native</strong> application ? Or
+                <strong> UX</strong> & <strong>UI</strong> advices ?
+              </p>
+              <LetsTalkLink>Let's Talk</LetsTalkLink>
+            </SectionDescription>
+          </Section>
+
+          {/* Tech Stack Section */}
+          <Section>
+            <SectionTitle>Tech' Stack</SectionTitle>
+            <Image
+              src={require('../images/illustrations/cooking.png')}
+              alt='Cooking an app with multiple technologies'
+            />
+            <SectionDescription>
+              <p>I use only dope technologies</p>
+            </SectionDescription>
+          </Section>
+
+          {/* About Me */}
+          <Section id='about-me'>
+            <SectionTitle>My Story</SectionTitle>
+            <SectionDescription>
+              <p>
+                I drew alot first professional experience: i felt in love with
+                web developpement with my first experience with angular
+              </p>
+              <p>
                 I started watching online courses, reading books, since then,
                 nothing has changed.
-                <br />
-                <br />
+              </p>
+              <p>
                 Everyday of my life, i'm making sure that I'm alway up to date
                 in order to be a game changer in my daily work and also on my
                 side projects.
-                <br />
-                <br />
+              </p>
+              <p>
                 Really rigourous with my daily routing, I'm alway improving my
                 rituals, wake up early, learn, sport, work, repeat.
               </p>
-            </div>
-            <IllustrationImageContainer>
-              <img
-                src={require('../images/illustrations/reading.png')}
-                alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
-              />
-            </IllustrationImageContainer>
-            <p>
-              first professional experience: i felt in love with web
-              developpement with my first experience with angular
-              <br />
-              <br />
-              I started watching online courses, reading books, since then,
-              nothing has changed.
-              <br />
-              <br />
-              Everyday of my life, i'm making sure that I'm alway up to date in
-              order to be a game changer in my daily work and also on my side
-              projects.
-              <br />
-              <br />
-              Really rigourous with my daily routing, I'm alway improving my
-              rituals, wake up early, learn, sport, work, repeat.
-            </p>
-          </MyStory>
-          <WhatAreMySkills>
-            {/* TODO: add alt */}
-            <IllustrationImageContainer>
-              <img
-                src={require('../images/illustrations/cooking.png')}
-                alt=''
-              />
-            </IllustrationImageContainer>
-            <TechStackDesc>
-              <p>I use only dope technologies</p>
-              <p>I use only dope technologies</p>
-              <p>I use only dope technologies</p>
-              <p>I use only dope technologies</p>
-              <p>I use only dope technologies</p>
-            </TechStackDesc>
-          </WhatAreMySkills>
-        </SkillsSection>
-        {/* 
-          1. Skills 
-          2. Education
-          3. Hobbies
-        */}
-      </Container>
-    </Layout>
+            </SectionDescription>
+            <Image
+              src={require('../images/illustrations/reading.png')}
+              alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
+            />
+            <SectionDescription>
+              <p>
+                first professional experience: i felt in love with web
+                developpement with my first experience with angular
+              </p>
+              <p>
+                I started watching online courses, reading books, since then,
+                nothing has changed.
+              </p>
+              <p>
+                Everyday of my life, i'm making sure that I'm alway up to date
+                in order to be a game changer in my daily work and also on my
+                side projects. Really rigourous with my daily routing, I'm alway
+                improving my rituals, wake up early, learn, sport, work, repeat.
+              </p>
+            </SectionDescription>
+          </Section>
+        </Container>
+      </Layout>
+    </Fragment>
   )
 }
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  img {
-    animation: float 6s ease-in-out infinite;
-  }
 
   /* Animations */
   .fade-enter,
@@ -167,18 +155,32 @@ const Container = styled.div`
   }
 `
 
-const GreetingSection = styled.section`
+const Image = styled.img`
+  animation: float 6s ease-in-out infinite;
+`
+
+const Section = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0rem 1rem;
-  @media screen {
+  padding: 2rem 0.5rem;
+`
+
+const SectionTitle = styled.h3`
+  margin: 1rem 0;
+  color: ${(props) => props.theme.primary};
+`
+
+const SectionDescription = styled.p`
+  color: ${(props) => props.theme.dimGray};
+  font-weight: 100;
+  strong {
+    color: ${(props) => props.theme.primary};
   }
 `
-const GreetingMessageContainer = styled.div`
-  margin: 2rem 0;
-`
-const GreetingMessage = styled.div`
+
+const GreetingsMessage = styled.div`
   h1,
   .Typist {
     color: ${(props) => props.theme.black};
@@ -196,29 +198,8 @@ const GreetingMessage = styled.div`
     color: ${(props) => props.theme.secondary};
   }
 `
-const HeroImageContainer = styled.div`
-  width: 70%;
-`
 
-const WhoAmISection = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 0;
-  h2 {
-    font-size: 1rem;
-    color: ${(props) => props.theme.secondary};
-  }
-`
-
-const WhoAmIDescription = styled.p`
-  color: ${(props) => props.theme.dimGray};
-  font-weight: 100;
-  strong {
-    color: ${(props) => props.theme.primary};
-  }
-`
-const LetsTalk = styled.a`
+const LetsTalkLink = styled.a`
   display: block;
   margin: 1rem 0;
   font-weight: bold;
@@ -230,33 +211,4 @@ const LetsTalk = styled.a`
   justify-content: center;
   border-radius: ${(props) => props.theme.borderRadius};
   padding: 0.5rem 0.5rem;
-`
-
-const SkillsSection = styled.section``
-
-const MyStory = styled.div`
-  padding: 6rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  p {
-  }
-  img {
-  }
-`
-
-const WhatAreMySkills = styled.div`
-  padding: 6rem 0;
-  display: flex;
-`
-const TechStackDesc = styled.div`
-  width: 40%;
-`
-const IllustrationImageContainer = styled.div`
-  width: 100%;
-  img {
-    height: auto;
-    width: auto;
-  }
 `

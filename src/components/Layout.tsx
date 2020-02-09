@@ -25,7 +25,7 @@ export default function Layout({ children }: Props) {
       render={(data) => (
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Header />
+          {/* <Header /> */}
           <Container>
             {children}
             {/* <Footer /> */}
@@ -37,7 +37,7 @@ export default function Layout({ children }: Props) {
 }
 
 const Container = styled.div`
-  padding: 6rem 3rem 0;
+  padding: 3rem 1rem;
 `
 
 const theme = {
