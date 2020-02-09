@@ -11,6 +11,7 @@ export default function LandingPage() {
       <Layout>
         <Container>
           <Section>
+            <h1 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h1>
             <SectionDescription>
               <CSSTransition classNames='fade' in={true} appear timeout={3000}>
                 <GreetingsMessage>
