@@ -319,21 +319,17 @@ const resume: {
       company: 'Wiidii',
       title: 'Ingénieur Frontend',
       location: { city: 'Lille', country: 'France' },
-      description: `tneilc ecneirépxeʼl ennoitulovér iuq latigid tnatsissaʼd noitarénég ellevuon enu'd noitaérc al tub ruop tnaya lanif tneilc nu tse iidiiW`,
-      data: { from: 2019, to: 'Présent' },
+      description:
+        "Wiidii est un client final ayant pour but la création d'une nouvelle génération d’assistant digital qui révolutionne l’expérience client.",
+      data: { from: 2019, to: 'présent' },
       projectExamples: [
         {
-          title: 'HNL (Heart Never Lies) — Développeur Frontend',
+          title: 'Dashboard opérateur humain — Ingénieur Frontend',
           summary:
-            'HNL est une société proposant une solution de marketing émotionnel. L’outil est composé de capteurs spécifiques, reliés à une application Web/Desktop. Dans un souci de portabilité, NoConsulting est intervenue dans la création d’une application mobile permettant la mesure.',
-          actions: [
-            'Chiffrage projet',
-            'Mise en place des environnements pour la partie mobile',
-            'Conception et implémentation'
-          ],
+            'Dashboard permettant aux opérateurs humains de satisfaire a les besoin de chaque utilisateur ainsi que leur gestion.',
+          actions: [],
           techStack: [
             'React',
-            'React Native',
             'JavaScript',
             'TypeScript',
             'Git',
@@ -341,6 +337,30 @@ const resume: {
             'Agile(Scrum)'
           ]
         },
+        {
+          title: 'Application Wiidii (Androind & iOS) — Ingénieur Frontend',
+          summary:
+            "Interface permettant aux utilisateurs finaux d'avoir acces a tout un panel de services comprenant la possiblité de chatter avec leur assistant et d'organiser leur quotidien.",
+          actions: [],
+          techStack: [
+            'React Native',
+            'JavaScript',
+            'TypeScript',
+            'Git',
+            'JIRA',
+            'Agile(Scrum)'
+          ]
+        }
+      ]
+    },
+    {
+      company: 'NoConsulting',
+      title: 'Ingénieur Frontend',
+      location: { city: 'Lille', country: 'France' },
+      description:
+        'J’ai travaillé sur plusieurs projets en “Agilité/Scrum“ en tant que développeur Frontend et encadreur technique sur du React, React Native, Vue et Angular.',
+      data: { from: 2017, to: 2019 },
+      projectExamples: [
         {
           title: 'HNL (Heart Never Lies) — Développeur Frontend',
           summary:
