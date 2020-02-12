@@ -43,12 +43,13 @@ const Container = styled.div`
 
 const theme = {
   white: '#FFF',
+  lightGray: '#3B4D59',
+  dimGray: '#454F5B',
   black: '#212B36',
   primary: '#102635',
   secondary: '#26b4fd',
   red: '#BE3A31',
   yellow: '#EEC200',
-  dimGray: '#454F5B',
   borderRadius: '4px'
 }
 Object.assign(theme, {

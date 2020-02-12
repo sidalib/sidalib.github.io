@@ -20,7 +20,7 @@ export default function ResumePage(): ReactElement {
       <Container>
         <Link to='/'>Go Back</Link>
         <Header>
-          <img src={require('../images/resume-picture.jpg')} alt='logo' />
+          {/* <img src={require('../images/resume-picture.jpg')} alt='logo' /> */}
           <h2>{resume.intro.name}</h2>
           <h3>{resume.intro.job}</h3>
           <hr />
@@ -176,6 +176,9 @@ const Container = styled.div`
   & > a {
     align-self: flex-start;
   }
+  h3 {
+    color: ${({ theme: { lightGray } }) => lightGray};
+  }
 `
 
 const Header = styled.div`
@@ -185,7 +188,7 @@ const Header = styled.div`
   hr {
     width: 10rem;
     height: 0.1rem;
-    background-color: ${({ theme: { blue } }) => blue};
+    background-color: ${({ theme: { secondary } }) => secondary};
     margin-bottom: 1rem;
   }
   img {
@@ -195,7 +198,7 @@ const Header = styled.div`
 
   h2 {
     text-transform: uppercase;
-    color: ${({ theme: { blue } }) => blue};
+    color: ${({ theme: { secondary } }) => secondary};
   }
   h3 {
     text-transform: uppercase;
@@ -220,7 +223,7 @@ const Sidebar = styled.div`
       a {
         margin-left: 0.7rem;
         text-decoration: none;
-        color: ${({ theme: { black } }) => black};
+        color: ${({ theme: { primary } }) => primary};
         font-weight: 600;
       }
       p {
@@ -252,7 +255,7 @@ const Education = styled.div`
       margin-bottom: 0.7rem;
     }
     h4:nth-of-type(2) {
-      color: ${({ theme: { dimGray } }) => dimGray};
+      color: ${({ theme: { secondary } }) => secondary};
       font-weight: 600;
     }
   }
@@ -260,7 +263,7 @@ const Education = styled.div`
 
 const Abilities = styled.div`
   h4 {
-    color: ${({ theme: { blue } }) => blue};
+    color: ${({ theme: { lightGray } }) => lightGray};
   }
 `
 const Hobbies = styled.div``
@@ -309,17 +312,35 @@ const resume: {
       icon: <FaAddressCard />
     },
     pitch:
-      "Je design et m'occupe de la conception et ingénierie de votre solution Web et Native."
+      "Je  m'occupe du design ainsi que le développement de votre solution Web et Native."
   },
   experience: [
     {
-      company: 'NoConsulting',
+      company: 'Wiidii',
       title: 'Ingénieur Frontend',
       location: { city: 'Lille', country: 'France' },
-      description:
-        'J’ai travaillé sur plusieurs projets en “Agilité/Scrum“ en tant que développeur Frontend et encadreur technique sur du React, React Native, Vue et Angular.',
-      data: { from: 2017, to: 2019 },
+      description: `tneilc ecneirépxeʼl ennoitulovér iuq latigid tnatsissaʼd noitarénég ellevuon enu'd noitaérc al tub ruop tnaya lanif tneilc nu tse iidiiW`,
+      data: { from: 2019, to: 'Présent' },
       projectExamples: [
+        {
+          title: 'HNL (Heart Never Lies) — Développeur Frontend',
+          summary:
+            'HNL est une société proposant une solution de marketing émotionnel. L’outil est composé de capteurs spécifiques, reliés à une application Web/Desktop. Dans un souci de portabilité, NoConsulting est intervenue dans la création d’une application mobile permettant la mesure.',
+          actions: [
+            'Chiffrage projet',
+            'Mise en place des environnements pour la partie mobile',
+            'Conception et implémentation'
+          ],
+          techStack: [
+            'React',
+            'React Native',
+            'JavaScript',
+            'TypeScript',
+            'Git',
+            'JIRA',
+            'Agile(Scrum)'
+          ]
+        },
         {
           title: 'HNL (Heart Never Lies) — Développeur Frontend',
           summary:
@@ -427,14 +448,16 @@ const resume: {
         { label: 'HTML' },
         { label: 'CSS' },
         { label: 'JavaScript' },
+        { label: 'TypeScript' },
         { label: 'React' },
         { label: 'React Native' },
-        { label: 'Next(SSR)' },
+        { label: 'Next (SSR)' },
+        { label: 'Gatsby (Static)' },
         { label: 'Redux' },
         { label: 'Apollo' },
         { label: 'Jest' },
         { label: 'Vue' },
-        { label: 'Nuxt(SSR)' },
+        { label: 'Nuxt (SSR)' },
         { label: 'Angular' },
         { label: 'Ionic' },
         { label: 'Storybook' }

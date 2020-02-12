@@ -5,7 +5,6 @@ import Typist from 'react-typist'
 import { Layout, SEO } from '../components'
 
 /* TODO: 
-  - media queries
   - add img alts
   - remove WIP
 */
@@ -54,31 +53,29 @@ export default () => {
             <Section id='intro'>
               <SectionTitle>Who am I ?</SectionTitle>
               <SectionDescription style={{ textAlign: 'center' }}>
-                <p>
-                  My name is <strong>Sid Bentifraouine</strong> and I'm a
-                  <strong> Frontend Engineer</strong>
-                  <br /> I<strong> Design </strong>+<strong> Code</strong>:
-                  <strong> Web </strong>+<strong> Mobile </strong>
-                  Applications.
-                </p>
-                <p>
-                  You need help with you <strong>React</strong>,
-                  <strong> React Native</strong> application ? Or
-                  <strong> UX</strong> & <strong>UI</strong> advices ?
-                </p>
-                <LetsTalkLink href='mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!'>
-                  Let's Talk
-                </LetsTalkLink>
+                My name is <strong>Sid Bentifraouine</strong> and I'm a
+                <strong> Frontend Engineer</strong>
+                <br /> I<strong> Design </strong>+<strong> Code</strong>:
+                <strong> Web </strong>+<strong> Mobile </strong>
+                Applications.
               </SectionDescription>
             </Section>
 
             <Section>
-              <SectionTitle>Aliqua id</SectionTitle>
+              <SectionTitle>My tools</SectionTitle>
               <SectionDescription>
-                Reprehenderit est elit pariatur enim dolore adipisicing
-                incididunt qui et. Elit nulla Lorem deserunt elit. Consequat
-                pariatur dolore commodo minim nulla exercitation aute aute ad
-                enim ad. Et id dolor eiusmod minim sit aliqua aute eu tempor.
+                <h4>Methodology</h4>
+                <p>Scrum !!! That's all..</p>
+              </SectionDescription>
+              <SectionDescription>
+                <h4>Design</h4>
+                <p>
+                  I worked with Sketch combined with Abstract, Zeplin...etc...
+                  then I discovered Figma two years ago, and I stuck to it. This
+                  tool is just an all in one, including a real-time multiplayer
+                  mode! How can I ask more? For my inspirations, I read from de
+                  best, people like Adam Wathan & Steve Shcoger, Sara Soueidan.
+                </p>
               </SectionDescription>
 
               <div className='SideBySide'>
@@ -87,10 +84,10 @@ export default () => {
                   alt='Cooking an app with multiple technologies'
                 />
                 <SectionDescription>
-                  Reprehenderit est elit pariatur enim dolore adipisicing
-                  incididunt qui et. Elit nulla Lorem deserunt elit. Consequat
-                  pariatur dolore commodo minim nulla exercitation aute aute ad
-                  enim ad. Et id dolor eiusmod minim sit aliqua aute eu tempor.
+                  It's easy to be convinced when you see all those giants using
+                  it. <br /> So the day a better tool comes, I'll be switching,
+                  till then I'm sticking it with an open-minded view to any
+                  better alternative for my and your needs.
                 </SectionDescription>
               </div>
             </Section>
@@ -138,6 +135,17 @@ export default () => {
                   dolore duis.
                 </SectionDescription>
               </div>
+            </Section>
+            <Section>
+              <SectionDescription>
+                You need help with you <strong>React</strong>,
+                <strong> React Native</strong> application ? Or
+                <strong> UX</strong> & <strong>UI</strong> advices ?
+              </SectionDescription>
+
+              <LetsTalkLink href='mailto:sidbentifraouine@gmail.com?subject=Hi there 🖖!'>
+                Let's Talk
+              </LetsTalkLink>
             </Section>
           </Content>
         </Container>
@@ -238,7 +246,7 @@ const SectionTitle = styled.h3`
   color: ${(props) => props.theme.primary};
 `
 
-const SectionDescription = styled.p`
+const SectionDescription = styled.div`
   color: ${(props) => props.theme.dimGray};
   strong {
     color: ${(props) => props.theme.primary};
