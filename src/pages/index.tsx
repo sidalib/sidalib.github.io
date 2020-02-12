@@ -15,7 +15,7 @@ export default () => {
       <Layout>
         <Container>
           <Section>
-            <h1 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h1>
+            <h3 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h3>
             <div className='Hero'>
               <CSSTransition classNames='fade' in={true} appear timeout={3000}>
                 <GreetingsContainer>
@@ -64,17 +64,39 @@ export default () => {
             <Section>
               <SectionTitle>My tools</SectionTitle>
               <SectionDescription>
-                <h4>Methodology</h4>
-                <p>Scrum !!! That's all..</p>
+                <SectionSubtitle>Methodology</SectionSubtitle>
+                <p>
+                  I believe that Scrum is the most efficient working framework,
+                  in fact, this is how people naturally work since the dawn of
+                  time.
+                </p>
+                <p>
+                  You can read this excellent book written by the creator of
+                  Scrum himself if you're not convinced about it, but I'm sure
+                  you already do.
+                </p>
               </SectionDescription>
               <SectionDescription>
-                <h4>Design</h4>
+                <SectionSubtitle>Design</SectionSubtitle>
                 <p>
-                  I worked with Sketch combined with Abstract, Zeplin...etc...
-                  then I discovered Figma two years ago, and I stuck to it. This
-                  tool is just an all in one, including a real-time multiplayer
-                  mode! How can I ask more? For my inspirations, I read from de
-                  best, people like Adam Wathan & Steve Shcoger, Sara Soueidan.
+                  I worked with Sketch combined with Abstract, Zeplin and so on.
+                </p>
+                <p>
+                  I worked with <strong>Sketch</strong> combined with Abstract,
+                  Zeplin.
+                </p>
+                <p>
+                  Two years ago, I discovered <strong>Figma</strong>, and I just
+                  fell in love with it just like Sketch but with less money
+                  spending. This tool is just an all in one, including a
+                  real-time multiplayer mode! How can I ask more? It makes my
+                  design workflow easy and fast and lets me create sharable
+                  design systems across my works.
+                </p>
+                <p>
+                  For my inspirations, I read from de best, people like
+                  <strong> Adam Wathan</strong> & <strong>Steve Shcoger</strong>
+                  ,<strong> Sara Soueidan</strong>.
                 </p>
               </SectionDescription>
 
@@ -84,30 +106,89 @@ export default () => {
                   alt='Cooking an app with multiple technologies'
                 />
                 <SectionDescription>
-                  It's easy to be convinced when you see all those giants using
-                  it. <br /> So the day a better tool comes, I'll be switching,
-                  till then I'm sticking it with an open-minded view to any
-                  better alternative for my and your needs.
+                  <SectionSubtitle>Frontend</SectionSubtitle>
+                  <p>
+                    Frontend When it comes to the implementation,
+                    <strong> React</strong> is my primary tool. It helps me
+                    resolve all my problems better than any other tool. And it
+                    does the same for the enormous needs of companies like
+                    Facebook, Instagram, Netflix, Airbnb, Microsoft.
+                  </p>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center'
+                    }}
+                  >
+                    <p>
+                      I'm always aiming to be up-to-date with, my mind is opened
+                      to any better alternative to my current tools, so in 2020
+                      I'm betting on <strong>Flutter.</strong>
+                    </p>
+                    <ul style={{ textAlign: 'left' }}>
+                      <li>
+                        For Server-Side Rendering: I use
+                        <strong> Next.js</strong>
+                      </li>
+                      <li>
+                        For Static Websites: I use <strong>Gatsby</strong>
+                      </li>
+                      <li>
+                        For Native...<strong>React Native!</strong>
+                      </li>
+                    </ul>
+                  </p>
+                </SectionDescription>
+
+                <SectionDescription>
+                  <SectionSubtitle>Backend</SectionSubtitle>
+                  <p>
+                    I worked with
+                    <strong>Ruby on Rails</strong>, which is a pure pleasure to
+                    work with.
+                  </p>
+                  <p>
+                    Today I'm sticking with <strong>Node/Express</strong>, it
+                    covers the majority of use cases I work on. Combining it
+                    with <strong>GraphQL Yoga & Prisma</strong>, which works
+                    like a charm with my Frontend Integration with
+                    <strong> Apollo</strong>.
+                  </p>
                 </SectionDescription>
               </div>
             </Section>
 
             <Section>
-              <SectionTitle>Sit aliquip</SectionTitle>
+              <SectionTitle>My learning process</SectionTitle>
               <SectionDescription>
-                Ipsum aliquip culpa tempor anim sunt duis reprehenderit do
-                officia cupidatat amet commodo. Adipisicing consequat est aliqua
-                nostrud non. Nostrud veniam velit cupidatat ex. Officia aliqua
-                esse minim anim. Incididunt pariatur cupidatat amet sit dolore
-                id anim deserunt sit aliqua duis adipisicing.
+                <p>
+                  To be <strong>efficient</strong>. The main idea is to always
+                  be <strong>up to date</strong> with the latest language, good
+                  practices, patterns, and framework, and this requires to put
+                  hard work on the table. Here is my routine:
+                </p>
+                <p>
+                  Up at <strong>5:00 AM</strong>, hitting cardio by
+                  <strong> 5:10 AM</strong>, completing my morning routines at
+                  <strong> 6 AM </strong>
+                  by reading articles and watching courses.
+                </p>
+                <p>
+                  I'm like a sponge near the materials of my favorite
+                  instructors: <strong>Kent C Dodds</strong>,
+                  <strong> Dan Abramov</strong>, and
+                  <strong> Kyle Simpson</strong> and Wes Bos.{' '}
+                </p>
               </SectionDescription>
               <div className='SideBySide'>
-                <SectionDescription>
-                  Anim commodo proident veniam laboris laboris sint laborum
-                  commodo. Nisi eu labore nulla eu eu nulla eiusmod nisi aliquip
-                  exercitation. Est non dolore anim anim commodo mollit
-                  incididunt sunt mollit.
-                </SectionDescription>
+                <p>
+                  Also, I watch a lot of Video courses from{' '}
+                  <strong>Egghead</strong> or <strong>Frontend Master</strong>,
+                  those materials aren't cheap. Still, I believe in the fact
+                  that investing 1/3 of my money in learning will forever be the
+                  best investment that I can do.
+                </p>
                 <Image
                   src={require('../images/illustrations/reading.svg')}
                   alt="Low fidelity illustration of Sid while he is reading a 'React for Dummies' Book"
@@ -116,12 +197,26 @@ export default () => {
             </Section>
 
             <Section>
-              <SectionTitle>Eiusmod et qui</SectionTitle>
+              <SectionTitle>More About Me</SectionTitle>
               <SectionDescription>
-                Consectetur nostrud magna ullamco labore in proident.
-                Consectetur dolore anim ex cupidatat amet ea ea Lorem dolor
-                veniam labore magna. Enim aliqua eiusmod proident ex duis dolore
-                duis.
+                <p>
+                  Besides my primary job as a{' '}
+                  <strong> Frontend Engineer</strong>, I'm also a{' '}
+                  <strong>Teacher</strong> at the{' '}
+                  <strong>Polytechnic University of Hauts-de-France</strong>.
+                </p>
+                <p>
+                  The course is aimed for <strong>Master 2 Students</strong>,
+                  and I speak about <strong>Mobile Developpement</strong> with
+                  Cross-platform frameworks like React Native, Flutter, Ionic.
+                </p>
+                <p>
+                  This is so rewarding and joyful to share the things that I
+                  know with others. When I find the time, I enjoy animating
+                  <strong> workshops</strong> and <strong>meetups</strong>, I
+                  believe that sharing knowledge is an excellent way to give
+                  something back to the community.
+                </p>
               </SectionDescription>
               <div className='SideBySide'>
                 <Image
@@ -129,10 +224,13 @@ export default () => {
                   alt='Sid is doing some BJJ'
                 />
                 <SectionDescription>
-                  Consectetur nostrud magna ullamco labore in proident.
-                  Consectetur dolore anim ex cupidatat amet ea ea Lorem dolor
-                  veniam labore magna. Enim aliqua eiusmod proident ex duis
-                  dolore duis.
+                  <p>
+                    Also, I <strong>love sport</strong>, I practice
+                    <strong> Yoga</strong> which is part of my morning routine,
+                    <strong> Brazilian Jiu Jitsu</strong>, and
+                    <strong> Judo</strong>. I also enjoy{' '}
+                    <strong>Hiking.</strong>
+                  </p>
                 </SectionDescription>
               </div>
             </Section>
@@ -198,6 +296,9 @@ const GreetingsContainer = styled.div`
     line-height: 0;
     color: ${(props) => props.theme.secondary};
     text-align: center;
+    @media all and (min-width: 768px) {
+      text-align: left;
+    }
   }
 `
 
@@ -242,14 +343,33 @@ const Section = styled.section`
 `
 
 const SectionTitle = styled.h3`
-  margin: 2rem 0;
+  margin: 0 0 2rem;
   color: ${(props) => props.theme.primary};
+  text-align: center;
+  line-height: 0;
+  text-transform: uppercase;
+
+  @media all and (min-width: 768px) {
+    text-align: left;
+  }
+`
+const SectionSubtitle = styled.h4`
+  text-align: center;
+  color: ${({ theme: { lightGray } }) => lightGray};
+  text-transform: uppercase;
+  @media all and (min-width: 768px) {
+    text-align: left;
+  }
 `
 
 const SectionDescription = styled.div`
+  text-align: center;
   color: ${(props) => props.theme.dimGray};
   strong {
     color: ${(props) => props.theme.primary};
+  }
+  @media all and (min-width: 768px) {
+    text-align: left;
   }
 `
 
