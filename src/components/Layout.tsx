@@ -26,7 +26,7 @@ export default function Layout({ children }: Props) {
       render={(data) => (
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          {/* <Header /> */}
+          <Header />
           <Container>
             {children}
             <Footer />
@@ -60,10 +60,15 @@ const GlobalStyle = createGlobalStyle`
   @import '~react-typist/dist/Typist.css';
 
   @font-face {
-    font-family: Proxima Nova;
-    src: url('../fonts/proxima_ssv/Proxima-Nova-Regular.otf');
+    font-family: BrandonGrotesqueMedium;
+    src: url(${require('../fonts/brandon-grotesque/brandon-med.otf')});
   }
-  
+
+  @font-face {
+    font-family: MontserratMedium;
+    src: url(${require('../fonts/montserrat/montserrat-medium.ttf')});
+  }
+
   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -295,7 +300,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -312,7 +317,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -329,7 +334,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -346,7 +351,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -363,7 +368,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -380,7 +385,7 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: BrandonGrotesqueMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -441,6 +446,11 @@ const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
   }
+  p, a {
+    font-family: MontserratMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
   p {
     margin-left: 0;
     margin-right: 0;

@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-
 import styled from 'styled-components'
 import {
   FaGithub,
@@ -16,7 +15,7 @@ import Link from '../components/BigLink'
 export default function ResumePage(): ReactElement {
   return (
     <Layout>
-      <SEO title='Resume' keywords={['cv', 'resume']} />
+      <SEO title='CV' keywords={['cv', 'resume']} />
       <Container>
         <Link to='/'>Go Back</Link>
         <Header>
@@ -172,7 +171,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 6rem 1rem;
   margin: 0;
   & > a {
     align-self: flex-start;
@@ -238,14 +237,12 @@ const AboutMe = styled.div`
   width: 70vw;
   padding: 1rem;
 `
-
 const Section = styled.div`
   margin-top: 2rem;
   li {
     margin: 0;
   }
 `
-
 const Education = styled.div`
   margin-top: 2rem;
   ul {
@@ -328,7 +325,7 @@ const resume: {
           title:
             "Cours de développement d'applications mobiles - Master 2 TNSI",
           summary:
-            'Au sein de ce cours, les etudiants ont appris a developper une application mobile (iOS & Android) avec des Framworks Cross-Platform: React Native, Flutter, Ionic',
+            'Au sein de ce cours, les etudiants ont appris a developper une application mobile (iOS & Android) avec des Framworks Cross-Platform: React Native, Flutter, Ionic.',
           actions: ['Cours Magistral', 'TD', 'TP'],
           techStack: [
             'React',

@@ -20,6 +20,7 @@ export default () => {
               <CSSTransition classNames='fade' in={true} appear timeout={3000}>
                 <GreetingsContainer>
                   <h1>Hi, I'm Sid</h1>
+                  <h3>Frontend Engineer</h3>
                   {/* <Typist
                     className='Typist'
                     startDelay={500}
@@ -30,14 +31,13 @@ export default () => {
                   >
                     I'm Sid
                   </Typist> */}
-                  <CSSTransition
+                  {/* <CSSTransition
                     classNames='fade'
                     in={true}
                     appear
                     timeout={5000}
-                  >
-                    <h3>Frontend Engineer</h3>
-                  </CSSTransition>
+                  > */}
+                  {/* </CSSTransition> */}
                 </GreetingsContainer>
               </CSSTransition>
               <CSSTransition classNames='fade' in={true} appear timeout={3000}>
@@ -61,7 +61,7 @@ export default () => {
               </SectionDescription>
             </Section>
 
-            <Section>
+            <Section id='tools'>
               <SectionTitle>My tools</SectionTitle>
               <SectionDescription>
                 <SectionSubtitle>Methodology</SectionSubtitle>
@@ -193,7 +193,7 @@ export default () => {
               </div>
             </Section>
 
-            <Section>
+            <Section id='me'>
               <SectionTitle>More About Me</SectionTitle>
               <SectionDescription>
                 <p>
@@ -231,7 +231,7 @@ export default () => {
                 </SectionDescription>
               </div>
             </Section>
-            <Section>
+            <Section id='contact'>
               <SectionDescription>
                 You need help with you <strong>React</strong>,
                 <strong> React Native</strong> application ? Or
@@ -254,7 +254,7 @@ const Container = styled.div`
   flex-direction: column;
 
   @media all and (min-width: 768px) {
-    padding: 0 10vw;
+    padding: 0 2rem;
   }
 
   /* Animations */
@@ -270,8 +270,12 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
+  padding: 1rem;
   @media all and (min-width: 768px) {
-    padding: 0 10vw;
+    padding: 0 3rem;
+  }
+  @media all and (min-width: 1068px) {
+    padding: 0 10rem;
   }
 `
 
@@ -280,7 +284,7 @@ const GreetingsContainer = styled.div`
   h1,
   .Typist {
     color: ${(props) => props.theme.black};
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 3rem;
     font-weight: bold;
     line-height: 1;
@@ -290,7 +294,6 @@ const GreetingsContainer = styled.div`
     margin-left: 0.5rem;
   }
   h3 {
-    line-height: 0;
     color: ${(props) => props.theme.secondary};
     text-align: center;
     @media all and (min-width: 768px) {
@@ -300,6 +303,7 @@ const GreetingsContainer = styled.div`
 `
 
 const Image = styled.img`
+  width: 100%;
   @keyframes float {
     0% {
       transform: translatey(0);
@@ -320,11 +324,11 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0.5rem;
+  padding: 6rem 0.5rem 0rem;
   .Hero {
     @media all and (min-width: 768px) {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 2fr;
       grid-column-gap: 1rem;
       justify-items: center;
       align-items: center;
@@ -362,6 +366,7 @@ const SectionSubtitle = styled.h4`
 
 const SectionDescription = styled.div`
   text-align: center;
+  line-height: 1.8;
   color: ${(props) => props.theme.dimGray};
   strong {
     color: ${(props) => props.theme.primary};
@@ -374,7 +379,6 @@ const SectionDescription = styled.div`
 const LetsTalkLink = styled.a`
   display: block;
   margin: 1rem auto;
-  width: 100px;
   padding: 0.5rem 0.5rem;
   align-self: center;
   display: flex;

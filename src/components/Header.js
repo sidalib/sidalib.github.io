@@ -6,10 +6,11 @@ import Burger from './Burger'
 const Container = styled.div`
   position: fixed;
   top: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   z-index: 100;
   background-color: ${({ hasScrolled }) =>
-    hasScrolled ? 'rgba(22, 34, 71, 0.8)' : 'rgba(255, 255, 255, 0.8)'};
+    hasScrolled ? 'rgb(33,43,54, 0.8)' : 'rgba(255, 255, 255, 0.8)'};
   padding: ${({ hasScrolled }) => (hasScrolled ? '0' : '1vh 0')};
   box-shadow: 0px 1px 2px rgba(45, 62, 79, 0.3);
   transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
@@ -113,13 +114,13 @@ class Header extends Component {
           </Logo>
           <Links isBurgerActive={isBurgerActive} hasScrolled={hasScrolled}>
             <li>
-              <Link to='#presentation'>Présentation</Link>
+              <Link to='#intro'>Intro</Link>
             </li>
             <li>
-              <Link to='#qui-sommes-nous'>Nous</Link>
+              <Link to='#tools'>My Tools</Link>
             </li>
             <li>
-              <Link to='#nos-services'>Nos services</Link>
+              <Link to='#me'>About me</Link>
             </li>
             <li>
               <Link to='#contact'>Contact</Link>
