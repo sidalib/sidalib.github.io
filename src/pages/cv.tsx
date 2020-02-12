@@ -287,22 +287,22 @@ const resume: {
         label: 'www.sidbentifraouine.com',
         url: 'https://www.sidbentifraouine.com',
         icon: <FaLink />
-      },
-      {
-        label: 'sidbentifraouine',
-        url: 'https://www.linkedin.com/in/sidbentifraouine/',
-        icon: <FaLinkedin />
-      },
-      {
-        label: 'sidbentifraouine',
-        url: 'https://github.com/sidbentifraouine',
-        icon: <FaGithub />
-      },
-      {
-        label: 'sbentifraouine',
-        url: 'https://twitter.com/sbentifraouine',
-        icon: <FaTwitter />
       }
+      // {
+      //   label: 'sidbentifraouine',
+      //   url: 'https://www.linkedin.com/in/sidbentifraouine/',
+      //   icon: <FaLinkedin />
+      // },
+      // {
+      //   label: 'sidbentifraouine',
+      //   url: 'https://github.com/sidbentifraouine',
+      //   icon: <FaGithub />
+      // },
+      // {
+      //   label: 'sbentifraouine',
+      //   url: 'https://twitter.com/sbentifraouine',
+      //   icon: <FaTwitter />
+      // }
     ],
     address: {
       city: 'Lille',
@@ -319,7 +319,7 @@ const resume: {
       title: 'Professeur',
       location: { city: 'Valenciennes', country: 'France' },
       description: '',
-      data: { from: 2019, to: 'présent' },
+      data: { from: 2019, to: "Ajourd'hui" },
       projectExamples: [
         {
           title:
@@ -345,7 +345,7 @@ const resume: {
       location: { city: 'Lille', country: 'France' },
       description:
         "Wiidii est un client final ayant pour but la création d'une nouvelle génération d’assistant digital qui révolutionne l’expérience client.",
-      data: { from: 2019, to: 'présent' },
+      data: { from: 2019, to: "Ajourd'hui" },
       projectExamples: [
         {
           title: 'Dashboard opérateur humain — Ingénieur Frontend',
@@ -362,7 +362,7 @@ const resume: {
           ]
         },
         {
-          title: 'Application Wiidii (Androind & iOS) — Ingénieur Frontend',
+          title: 'Application Wiidii (Android & iOS) — Ingénieur Frontend',
           summary:
             "Interface permettant aux utilisateurs finaux d'avoir acces a tout un panel de services comprenant la possiblité de chatter avec leur assistant et d'organiser leur quotidien.",
           actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
