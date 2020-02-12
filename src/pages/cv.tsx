@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import Link from '../components/BigLink'
 
 import styled from 'styled-components'
 import {
@@ -12,6 +11,7 @@ import {
   FaCar
 } from 'react-icons/fa'
 import { Layout, SEO } from '../components'
+import Link from '../components/BigLink'
 
 export default function ResumePage(): ReactElement {
   return (
@@ -21,7 +21,7 @@ export default function ResumePage(): ReactElement {
         <Link to='/'>Go Back</Link>
         <Header>
           {/* <img src={require('../images/resume-picture.jpg')} alt='logo' /> */}
-          <h2>{resume.intro.name}</h2>
+          <h1>{resume.intro.name}</h1>
           <h3>{resume.intro.job}</h3>
           <hr />
         </Header>
@@ -94,6 +94,7 @@ export default function ResumePage(): ReactElement {
                         <div key={projectTitle}>
                           <h5>{projectTitle}</h5>
                           <p>{summary}</p>
+                          <p>Actions:</p>
                           <ul>
                             {actions.map((actionName) => (
                               <li key={actionName}>{actionName}</li>
@@ -196,12 +197,13 @@ const Header = styled.div`
     width: 7rem;
   }
 
-  h2 {
+  h1 {
     text-transform: uppercase;
     color: ${({ theme: { secondary } }) => secondary};
   }
   h3 {
     text-transform: uppercase;
+    color: ${({ theme: { primary } }) => primary};
   }
 `
 
@@ -316,6 +318,31 @@ const resume: {
   },
   experience: [
     {
+      company: 'Université polytechnique des Hauts-de-France',
+      title: 'Professeur',
+      location: { city: 'Valenciennes', country: 'France' },
+      description: '',
+      data: { from: 2019, to: 'présent' },
+      projectExamples: [
+        {
+          title:
+            "Cours de développement d'applications mobiles - Master 2 TNSI",
+          summary:
+            'Au sein de ce cours, les etudiants ont appris a developper une application mobile (iOS & Android) avec des Framworks Cross-Platform: React Native, Flutter, Ionic',
+          actions: ['Cours Magistral', 'TD', 'TP'],
+          techStack: [
+            'React',
+            'JavaScript',
+            'TypeScript',
+            'Git',
+            'JIRA',
+            'Agile(Scrum)'
+          ]
+        }
+      ]
+    },
+
+    {
       company: 'Wiidii',
       title: 'Ingénieur Frontend',
       location: { city: 'Lille', country: 'France' },
@@ -327,7 +354,7 @@ const resume: {
           title: 'Dashboard opérateur humain — Ingénieur Frontend',
           summary:
             'Dashboard permettant aux opérateurs humains de satisfaire a les besoin de chaque utilisateur ainsi que leur gestion.',
-          actions: [],
+          actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
           techStack: [
             'React',
             'JavaScript',
@@ -341,7 +368,7 @@ const resume: {
           title: 'Application Wiidii (Androind & iOS) — Ingénieur Frontend',
           summary:
             "Interface permettant aux utilisateurs finaux d'avoir acces a tout un panel de services comprenant la possiblité de chatter avec leur assistant et d'organiser leur quotidien.",
-          actions: [],
+          actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
           techStack: [
             'React Native',
             'JavaScript',

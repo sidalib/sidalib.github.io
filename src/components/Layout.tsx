@@ -26,7 +26,7 @@ export default function Layout({ children }: Props) {
       render={(data) => (
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <Header />
+          {/* <Header /> */}
           <Container>
             {children}
             <Footer />
