@@ -66,14 +66,21 @@ export default () => {
               <SectionDescription>
                 <SectionSubtitle>Methodology</SectionSubtitle>
                 <p>
-                  I believe that Scrum is the most efficient working framework,
-                  in fact, this is how people naturally work since the dawn of
-                  time.
+                  I believe that <strong>Scrum</strong> is the most efficient
+                  working framework, in fact, this is how people naturally work
+                  since the dawn of time.
                 </p>
                 <p>
-                  You can read this excellent book written by the creator of
-                  Scrum himself if you're not convinced about it, but I'm sure
-                  you already do.
+                  You can read{' '}
+                  <a
+                    href='https://www.goodreads.com/book/show/19288230-scrum'
+                    target='_blank'
+                  >
+                    this excellent
+                  </a>{' '}
+                  book written by <strong>Jeff Sutherland</strong>, the creator
+                  of Scrum himself if you're not convinced about it, but I'm
+                  sure you already do.
                 </p>
               </SectionDescription>
               <SectionDescription>
@@ -83,15 +90,15 @@ export default () => {
                   Zeplin.
                 </p>
                 <p>
-                  Two years ago, I discovered <strong>Figma</strong>, and I just
-                  fell in love with it just like Sketch but with less money
-                  spending. This tool is just an all in one, including a
-                  real-time multiplayer mode! How can I ask more? It makes my
-                  design workflow easy and fast and lets me create sharable
-                  design systems across my works.
+                  Two years ago, I discovered <strong>Figma</strong>, and I fell
+                  in love with it. It works just like Sketch but with less money
+                  spending. This tool is an all in one, including a real-time
+                  multiplayer mode! How can we ask for more? It makes my design
+                  workflow easy and fast and lets me create sharable design
+                  systems across my works.
                 </p>
                 <p>
-                  For my inspirations, I read from de best, people like
+                  For my inspirations, I read from people like
                   <strong> Adam Wathan</strong> & <strong>Steve Shcoger</strong>
                   ,<strong> Sara Soueidan</strong>.
                 </p>
@@ -105,11 +112,11 @@ export default () => {
                 <SectionDescription>
                   <SectionSubtitle>Frontend</SectionSubtitle>
                   <p>
-                    Frontend When it comes to the implementation,
-                    <strong> React</strong> is my primary tool. It helps me
-                    resolve all my problems better than any other tool. And it
-                    does the same for the enormous needs of companies like
-                    Facebook, Instagram, Netflix, Airbnb, Microsoft.
+                    When it comes to implementation,
+                    <strong> React</strong> is my primary tool. It solves all my
+                    problems better than any other tool. And it does the same
+                    for the enormous needs of companies like Facebook,
+                    Instagram, Netflix, Airbnb, Microsoft.
                   </p>
                   <p
                     style={{
@@ -119,9 +126,9 @@ export default () => {
                     }}
                   >
                     <p>
-                      I'm always aiming to be up-to-date with, my mind is opened
-                      to any better alternative to my current tools, so in 2020
-                      I'm betting on <strong>Flutter.</strong>
+                      I'm always aiming to be up-to-date, my mind is always
+                      opened to any better alternative to my current tools, for
+                      exemple: I'm betting on <strong>Flutter</strong> for 2020.
                     </p>
                     <ul style={{ textAlign: 'left' }}>
                       <li>
@@ -132,7 +139,7 @@ export default () => {
                         For Static Websites: I use <strong>Gatsby</strong>
                       </li>
                       <li>
-                        For Native...<strong>React Native!</strong>
+                        For Native...<strong> React Native!</strong>
                       </li>
                     </ul>
                   </p>
@@ -142,7 +149,7 @@ export default () => {
                   <SectionSubtitle>Backend</SectionSubtitle>
                   <p>
                     I worked with
-                    <strong>Ruby on Rails</strong>, which is a pure pleasure to
+                    <strong>Ruby on Rails</strong>, which was a pure pleasure to
                     work with.
                   </p>
                   <p>
@@ -160,29 +167,30 @@ export default () => {
               <SectionTitle>My learning process</SectionTitle>
               <SectionDescription>
                 <p>
-                  To be <strong>efficient</strong>. The main idea is to always
+                  To be <strong>efficient</strong>: The main idea is to always
                   be <strong>up to date</strong> with the latest language, good
                   practices, patterns, and framework, and this requires to put
                   hard work on the table. Here is my routine:
                 </p>
                 <p>
                   Up at <strong>5:00 AM</strong>, hitting cardio by
-                  <strong> 5:10 AM</strong>, completing my morning routines at
+                  <strong> 5:10 AM</strong>, then completing my morning routines
+                  at
                   <strong> 6 AM </strong>
                   by reading articles and watching courses.
                 </p>
                 <p>
                   I'm like a sponge near the materials of my favorite
-                  instructors: <strong>Kent C Dodds</strong>,
+                  instructors: <strong>Kent C. Dodds</strong>,
                   <strong> Dan Abramov</strong>, and
-                  <strong> Kyle Simpson</strong> and Wes Bos.{' '}
+                  <strong> Kyle Simpson</strong> and Wes Bos.
                 </p>
               </SectionDescription>
               <div className='SideBySide'>
                 <p>
                   Also, I watch a lot of Video courses from{' '}
-                  <strong>Egghead</strong> or <strong>Frontend Master</strong>,
-                  those materials aren't cheap. Still, I believe in the fact
+                  <strong>Egghead</strong> and <strong>Frontend Masters</strong>
+                  , those materials aren't cheap. Still, I believe in the fact
                   that investing 1/3 of my money in learning will forever be the
                   best investment that I can do.
                 </p>

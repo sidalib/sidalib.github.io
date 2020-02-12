@@ -311,7 +311,7 @@ const resume: {
       icon: <FaAddressCard />
     },
     pitch:
-      "Je  m'occupe du design ainsi que le développement de votre solution Web et Native."
+      "À l'aide d'outils dopés, associés a un dur labeur, je m'occupe du design et du développement de votre solution Web et Native."
   },
   experience: [
     {
@@ -350,7 +350,7 @@ const resume: {
         {
           title: 'Dashboard opérateur humain — Ingénieur Frontend',
           summary:
-            'Dashboard permettant aux opérateurs humains de satisfaire a les besoin de chaque utilisateur ainsi que leur gestion.',
+            'Dashboard permettant aux opérateurs humains de satisfaire les besoin de chaque utilisateur ainsi que leur gestion.',
           actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
           techStack: [
             'React',
@@ -472,15 +472,15 @@ const resume: {
     {
       domain: 'Langues parlées',
       skills: [
-        { label: 'Kabyle', level: 'langue maternelle' },
+        { label: 'Kabyle', level: 'courant' },
         { label: 'Arabe', level: 'courant' },
-        { label: 'Français', level: 'courant/DELF B2' },
+        { label: 'Français', level: 'courant' },
         { label: 'Anglais', level: 'courant/TOIEC: 845' }
       ]
     },
     {
-      domain: 'Méthodologie',
-      skills: [{ label: 'Agile/Scrum' }, { label: 'Modélisation: UML, Merise' }]
+      domain: 'Méthodologie & conception',
+      skills: [{ label: 'Agile/Scrum' }, { label: 'JIRA' }, { label: 'UML' }]
     },
     {
       domain: 'Design',
@@ -513,9 +513,11 @@ const resume: {
         { label: 'Node' },
         { label: 'Express' },
         { label: 'API: RESTful, GraphQL' },
+        { label: 'GraphQL Yoga' },
         { label: 'Prisma' },
         { label: 'MySQL' },
-        { label: 'PostgreSQL' }
+        { label: 'PostgreSQL' },
+        { label: 'Firebase' }
       ]
     },
     {
