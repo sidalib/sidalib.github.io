@@ -79,9 +79,6 @@ export default () => {
               <SectionDescription>
                 <SectionSubtitle>Design</SectionSubtitle>
                 <p>
-                  I worked with Sketch combined with Abstract, Zeplin and so on.
-                </p>
-                <p>
                   I worked with <strong>Sketch</strong> combined with Abstract,
                   Zeplin.
                 </p>
