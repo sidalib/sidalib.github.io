@@ -305,7 +305,8 @@ const Image = styled.img`
       transform: translatey(0);
     }
     50% {
-      transform: translatey(-0.5rem);
+      /* transform: translatey(-0.5rem); */
+      transform: translatey(0rem);
     }
     100% {
       transform: translatey(0);
@@ -323,7 +324,7 @@ const Section = styled.section`
   .Hero {
     @media all and (min-width: 768px) {
       display: grid;
-      grid-template-columns: 2fr 3fr;
+      grid-template-columns: 1fr 1fr;
       grid-column-gap: 1rem;
       justify-items: center;
       align-items: center;

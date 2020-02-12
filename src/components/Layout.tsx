@@ -26,7 +26,7 @@ export default function Layout({ children }: Props) {
       render={(data) => (
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          {/* <Header /> */}
+          <Header />
           <Container>
             {children}
             <Footer />
@@ -71,7 +71,8 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  body {    
+  body {     
+    background: url('${require('../images/background.svg')}'); 
     color: hsla(0, 0%, 0%, 0.8);
     font-family: 'Proxima Nova', Arial, Helvetica, sans-serif, serif;
     font-weight: normal;
