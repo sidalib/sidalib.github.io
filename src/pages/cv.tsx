@@ -501,7 +501,7 @@ const resume: {
         {
           title: 'NoConsulting - Mentoring',
           summary:
-            "J'ai la croyance au fait que le partage constant de connaissances est une des meilleures manières de donner a notre communauté. J'ai pu donc tout ce que je pouvais apprendre pendant ma veille technologique.",
+            "J'ai la croyance au fait que le partage constant de connaissances est une des meilleures manières de donner à notre communauté. J'ai pu donc partager tout ce que j'apprends pendant ma veille technologique.",
           actions: [
             'Faire monter en compétence un apprenti sur les aspects metiers et techniques du monde Frontend',
             'Meetup - les PWA',
