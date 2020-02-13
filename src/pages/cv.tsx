@@ -352,7 +352,7 @@ const resume: {
           summary:
             'Au sein de ce cours, les étudiants ont pu apprendre a développer une application mobile (iOS & Android) en utilisant les dernières technologies Cross-platform: React Native, Flutter, Ionic.',
           actions: [
-            'Cours Magistral sur les généralités',
+            'Cours Magistral sur les généralités du développement Cross-platform',
             'Introduction à React Native, Flutter, Ionic',
             'Préparation du projet final, ainsi que les mockups interactifs avec Figma'
           ],
