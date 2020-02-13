@@ -67,6 +67,7 @@ export default function ResumePage(): ReactElement {
               <p>{resume.intro.pitch}</p>
             </Section>
             <Section>
+              <hr />
               <h3>Expériences Professionnelles</h3>
               {resume.experience.map(
                 ({
@@ -75,11 +76,13 @@ export default function ResumePage(): ReactElement {
                   location: { city, country },
                   data: { from, to },
                   description,
-                  projectExamples
+                  projectExamples,
+                  linker
                 }) => (
                   <div key={company}>
                     <h4>
-                      {title} chez {company}, {city}, {country} — {from}-{to}
+                      {title} {linker ? "à l'" : 'chez'} {company}, {city},{' '}
+                      {country} — {from}-{to}
                     </h4>
                     <p>{description}</p>
                     <h5>Exemples de projets</h5>
@@ -91,9 +94,9 @@ export default function ResumePage(): ReactElement {
                         techStack
                       }) => (
                         <div key={projectTitle}>
-                          <h5>{projectTitle}</h5>
+                          <h4>{projectTitle}</h4>
                           <p>{summary}</p>
-                          <p>Actions:</p>
+                          <h4>Actions</h4>
                           <ul>
                             {actions.map((actionName) => (
                               <li key={actionName}>{actionName}</li>
@@ -101,7 +104,10 @@ export default function ResumePage(): ReactElement {
                           </ul>
                           <p>
                             {techStack.map((techName, index) => (
-                              <span key={techName}>
+                              <span
+                                style={{ fontSize: '.7rem' }}
+                                key={techName}
+                              >
                                 {techName}
                                 {index !== techStack.length - 1 && ' | '}
                               </span>
@@ -114,6 +120,7 @@ export default function ResumePage(): ReactElement {
                 )
               )}
             </Section>
+            <hr />
             <Education>
               <h3>Formation</h3>
               {resume.education.map(
@@ -134,6 +141,7 @@ export default function ResumePage(): ReactElement {
                 )
               )}
             </Education>
+            <hr />
             <Abilities>
               <h3>Compétences</h3>
               {resume.abilities.map(({ domain, skills }) => (
@@ -151,13 +159,13 @@ export default function ResumePage(): ReactElement {
                 </div>
               ))}
             </Abilities>
+            <hr />
             <Hobbies>
               <h3>Loisirs</h3>
               <p>
-                Volontariat avec l’association "Aide aux Orphelins", Dessin
-                & peinture (Imagination), Piano (Autodidacte), Football (Travail
-                d’équipe et Leadership), Randonnée (Aventure), Pêche (Patience),
-                Cyclisme (Persévérance)
+                Jiu Jitsu Brésilien, Judo, Football, Randonnée, Cyclisme,
+                Dessin, Volontariat avec l’association "Aide aux Orphelins",
+                Meetups et BBLs
               </p>
             </Hobbies>
           </AboutMe>
@@ -173,11 +181,27 @@ const Container = styled.div`
   align-items: center;
   padding: 6rem 1rem;
   margin: 0;
+
+  hr {
+    background-color: ${({ theme: { secondary } }) => secondary};
+    width: 50%;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 0.9rem;
+  }
   & > a {
     align-self: flex-start;
   }
   h3 {
+    line-height: 1;
     color: ${({ theme: { lightGray } }) => lightGray};
+  }
+  h4 {
+    line-height: 1;
+  }
+  h5 {
+    line-height: 1;
   }
 `
 
@@ -316,6 +340,7 @@ const resume: {
   experience: [
     {
       company: 'Université polytechnique des Hauts-de-France',
+      linker: 'à',
       title: 'Professeur',
       location: { city: 'Valenciennes', country: 'France' },
       description: '',
@@ -325,15 +350,20 @@ const resume: {
           title:
             "Cours de développement d'applications mobiles - Master 2 TNSI",
           summary:
-            'Au sein de ce cours, les etudiants ont appris a developper une application mobile (iOS & Android) avec des Framworks Cross-Platform: React Native, Flutter, Ionic.',
-          actions: ['Cours Magistral', 'TD', 'TP'],
+            'Au sein de ce cours, les étudiants ont pu apprendre a développer une application mobile (iOS & Android) en utilisant les dernières technologies Cross-platform: React Native, Flutter, Ionic.',
+          actions: [
+            'Cours Magistral sur les généralités',
+            'Introduction à React Native, Flutter, Ionic',
+            'Préparation du projet final, ainsi que les mockups interactifs avec Figma'
+          ],
           techStack: [
             'React',
             'JavaScript',
             'TypeScript',
-            'Git',
-            'JIRA',
-            'Agile(Scrum)'
+            'Dart',
+            'Flutter',
+            'Ionic',
+            'Figma'
           ]
         }
       ]
@@ -344,13 +374,27 @@ const resume: {
       title: 'Ingénieur Frontend',
       location: { city: 'Lille', country: 'France' },
       description:
-        "Wiidii est un client final ayant pour but la création d'une nouvelle génération d’assistant digital qui révolutionne l’expérience client.",
-      data: { from: 2019, to: "Ajourd'hui" },
+        "Wiidii est un client final ayant pour but la création d'une nouvelle génération d’assistant digital qui révolutionne l’expérience client. Doté d'un aspect hybride, les demandes des clients sont résolues soit par l'IA, soit par un opérateur humain.",
+      data: { from: 2019, to: "aujourd'hui" },
       projectExamples: [
         {
-          title: 'Dashboard opérateur humain — Ingénieur Frontend',
+          title: 'Application Wiidii (Android & iOS)',
           summary:
-            'Dashboard permettant aux opérateurs humains de satisfaire les besoin de chaque utilisateur ainsi que leur gestion.',
+            "Interface permettant aux utilisateurs finaux d'avoir accès a tout un panel de services comprenant la possiblité de chatter avec leur assistant et d'organiser leur quotidien.",
+          actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
+          techStack: [
+            'React Native',
+            'JavaScript',
+            'TypeScript',
+            'Git',
+            'JIRA',
+            'Agile(Scrum)'
+          ]
+        },
+        {
+          title: 'Dashboard opérateur humain',
+          summary:
+            "Dashboard permettant aux opérateurs humains de satisfaire les besoins de chaque utilisateur ainsi que leur gestion. Cet outil couvrent les aspects: chat, planifications, gestions de lots d'utilisateurs",
           actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
           techStack: [
             'React',
@@ -362,12 +406,18 @@ const resume: {
           ]
         },
         {
-          title: 'Application Wiidii (Android & iOS) — Ingénieur Frontend',
+          title: 'Mise en places des bonnes pratiques React',
           summary:
-            "Interface permettant aux utilisateurs finaux d'avoir acces a tout un panel de services comprenant la possiblité de chatter avec leur assistant et d'organiser leur quotidien.",
-          actions: ['Développement des nouvelles features', 'TMA', 'Audit UX'],
+            "Dans un souci de qualité, il fallait centraliser les connaissances et les bonnes pratiques à respecter pour les projets existants ainsi que ce à venir. Le but était de créer un template projet React couvrant tous les besoins de chaque développeur par anticipation ceci va du boilerplate initial, le format des reducers et des sagas Redux jusqu'aux outils de tests d'intégration.",
+          actions: [
+            'Mise en place du template',
+            'Bonnes pratiques Redux & Redux Saga',
+            'Tests e2e avec Cypress',
+            'Authentification avec OIDC',
+            'Réflexion, concertation, documentation des bonnes pratiques'
+          ],
           techStack: [
-            'React Native',
+            'React',
             'JavaScript',
             'TypeScript',
             'Git',
@@ -440,6 +490,26 @@ const resume: {
             'JIRA',
             'Agile(Scrum)'
           ]
+        },
+        {
+          title: 'NoConsulting - Mentoring',
+          summary:
+            "J'ai la croyance au fait que le partage constant de connaissances est une des meilleures manières de donner a notre communauté. J'ai pu donc tout ce que je pouvais apprendre pendant ma veille technologique.",
+          actions: [
+            'Faire monter en compétence un apprenti sur les aspects metiers et techniques du monde Frontend',
+            'Meetup - les PWA',
+            'BBL - GraphQL avec React/Apollo & Express/GraphQL Yoga',
+            'BBL - Introduction à React'
+          ],
+          techStack: [
+            'React',
+            'Vue',
+            'Express',
+            'GraphQL',
+            'Apollo',
+            'GraphQL Yoga',
+            'Prossive Web Apps'
+          ]
         }
       ]
     }
@@ -500,6 +570,7 @@ const resume: {
         { label: 'Redux' },
         { label: 'Apollo' },
         { label: 'Jest' },
+        { label: 'Cypress' },
         { label: 'Vue' },
         { label: 'Nuxt (SSR)' },
         { label: 'Angular' },
