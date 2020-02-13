@@ -17,11 +17,14 @@ export default function ResumePage(): ReactElement {
     <Layout>
       <SEO title='CV' keywords={['cv', 'resume']} />
       <Container>
-        <Link to='/'>Go Back</Link>
+        {/* <Link to='/'>Go Back</Link> */}
         <Header>
           {/* <img src={require('../images/resume-picture.jpg')} alt='logo' /> */}
           <h1>{resume.intro.name}</h1>
           <h3>{resume.intro.job}</h3>
+          <a href='https://www.sidbentifraouine.com/' target='_blank'>
+            sidbentifraouine.com
+          </a>
           <hr />
         </Header>
         <Content>
@@ -220,6 +223,10 @@ const Header = styled.div`
     width: 7rem;
   }
 
+  a {
+    text-decoration: none;
+    color: ${({ theme: { lightGray } }) => lightGray};
+  }
   h1 {
     text-transform: uppercase;
     color: ${({ theme: { secondary } }) => secondary};
@@ -237,7 +244,7 @@ const Content = styled.div`
   }
 `
 const Sidebar = styled.div`
-  width: 30vw;
+  width: 25vw;
   font-size: 0.8rem;
   ul {
     list-style: none;
@@ -301,17 +308,17 @@ const resume: {
     name: 'Sid Bentifraouine',
     job: 'Ingénieur Frontend',
     links: [
-      {
-        hrefPrefix: 'mailto',
-        label: 'sidbentifraouine@gmail.com',
-        url: 'sidbentifraouine@gmail.com',
-        icon: <FaEnvelope />
-      },
-      {
-        label: 'www.sidbentifraouine.com',
-        url: 'https://www.sidbentifraouine.com',
-        icon: <FaLink />
-      }
+      // {
+      //   hrefPrefix: 'mailto',
+      //   label: 'sidbentifraouine@gmail.com',
+      //   url: 'sidbentifraouine@gmail.com',
+      //   icon: <FaEnvelope />
+      // },
+      // {
+      //   label: 'www.sidbentifraouine.com',
+      //   url: 'https://www.sidbentifraouine.com',
+      //   icon: <FaLink />
+      // }
       // {
       //   label: 'sidbentifraouine',
       //   url: 'https://www.linkedin.com/in/sidbentifraouine/',
