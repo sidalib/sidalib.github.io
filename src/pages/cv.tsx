@@ -83,7 +83,7 @@ export default function ResumePage(): ReactElement {
                   linker
                 }) => (
                   <div key={company}>
-                    <h4>
+                    <h4 style={{ fontSize: '1.1rem', color: '#26b4fd' }}>
                       {title} {linker ? "à l'" : 'chez'} {company}, {city},{' '}
                       {country} — {from}-{to}
                     </h4>
@@ -149,7 +149,7 @@ export default function ResumePage(): ReactElement {
               <h3>Compétences</h3>
               {resume.abilities.map(({ domain, skills }) => (
                 <div key={domain}>
-                  <h4>{domain}</h4>
+                  <h4 style={{ color: '#26b4fd' }}>{domain}</h4>
                   <p>
                     {skills.map(({ label, level }: any, index: number) => (
                       <span key={label}>
