@@ -63,9 +63,9 @@ const Links = styled.ul`
       text-decoration: none;
       color: ${({ hasScrolled }) =>
         hasScrolled ? 'rgba(255, 255, 255, 1)' : 'rgba(45, 62, 79, 1)'};
-      transition: 0.5s;
+      transition: 0.3s text-shadow ease-in-out;
       &:hover {
-        text-shadow: 0 0.1em 0.1em rgba(45, 62, 79, 0.7);
+        text-shadow: 0 0.1em 0.1em rgba(45, 62, 79, 0.3);
       }
     }
   }

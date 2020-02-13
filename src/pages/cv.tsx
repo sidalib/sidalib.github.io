@@ -415,7 +415,7 @@ const resume: {
         {
           title: 'Mise en places des bonnes pratiques React',
           summary:
-            "Dans un souci de qualité, il fallait centraliser les connaissances et les bonnes pratiques à respecter pour les projets existants ainsi que ce à venir. Le but était de créer un template projet React couvrant tous les besoins de chaque développeur par anticipation ceci va du boilerplate initial, le format des reducers et des sagas Redux jusqu'aux outils de tests d'intégration.",
+            "Dans un souci de qualité, il fallait centraliser les connaissances et les bonnes pratiques à respecter pour les projets existants ainsi que ce à venir. Le but était de créer un template projet React couvrant tous les besoins de chaque développeur par anticipation. Ceci va du boilerplate initial, le format des reducers et des sagas jusqu'aux outils de tests d'intégration.",
           actions: [
             'Mise en place du template',
             'Bonnes pratiques Redux & Redux Saga',
