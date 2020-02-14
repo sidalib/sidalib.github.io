@@ -64,7 +64,7 @@ const Container = styled.div`
   padding: ${({ hasScrolled }: ContainerProps) =>
     hasScrolled ? '0' : '1vh 0'};
   box-shadow: 0px 1px 2px rgba(45, 62, 79, 0.3);
-  transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0s;
+  transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out;
 `
 
 const ContainerGroup = styled.div`
