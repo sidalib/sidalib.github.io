@@ -9,22 +9,11 @@ function Header(): ReactElement {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    return window.removeEventListener('scroll', handleScroll, false)
+    return () => window.removeEventListener('scroll', handleScroll, false)
   }, [])
 
-  const toggleBurger = () => {
-    setIsBurgerActive(!isBurgerActive)
-  }
-
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset
-
-    if (scrollTop > 10) {
-      setHasScrolled(true)
-    } else {
-      setHasScrolled(hasScrolled)
-    }
-  }
+  const toggleBurger = () => setIsBurgerActive(!isBurgerActive)
+  const handleScroll = () => setHasScrolled(window.pageYOffset > 10)
 
   return (
     <Container hasScrolled={hasScrolled}>
