@@ -352,7 +352,7 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0.5rem 0rem;
+  padding: 8rem 0.5rem 0rem;
   .Hero {
     @media all and (min-width: 768px) {
       display: grid;
