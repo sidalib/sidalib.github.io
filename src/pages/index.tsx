@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { CSSTransition } from 'react-transition-group'
-import Typist from 'react-typist'
-import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import { Layout, SEO } from '../components'
+import { useSpring, animated } from 'react-spring'
 
-/* TODO: 
+import {
+  Layout,
+  SEO
+} from '../components' /* TODO: 
   - add img alts
   - remove WIP
 */
@@ -330,7 +329,7 @@ const GreetingsContainer = styled.div`
   }
 `
 
-const Image = styled.img`
+const Image = styled(animated.img)`
   width: 100%;
   @keyframes float {
     0% {

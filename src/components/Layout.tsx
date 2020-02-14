@@ -7,11 +7,14 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { useSpring, animated } from 'react-spring'
 import Header from './Header'
 import Footer from './Footer'
 
 type Props = { children: JSX.Element | JSX.Element[] }
 export default function Layout({ children }: Props) {
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+
   return (
     <StaticQuery
       query={graphql`
@@ -27,7 +30,7 @@ export default function Layout({ children }: Props) {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Header />
-          <Container>
+          <Container style={props}>
             {children}
             <Footer />
           </Container>
@@ -37,7 +40,7 @@ export default function Layout({ children }: Props) {
   )
 }
 
-const Container = styled.div`
+const Container = styled(animated.div)`
   padding: 0;
 `
 

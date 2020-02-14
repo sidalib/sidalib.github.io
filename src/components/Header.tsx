@@ -1,11 +1,13 @@
 import React, { useState, useEffect, ReactElement } from 'react'
 import styled from 'styled-components'
 import { Link } from '@reach/router'
+import { useSpring, animated } from 'react-spring'
 import Burger from './Burger'
 
 function Header(): ReactElement {
   const [isBurgerActive, setIsBurgerActive] = useState(false)
   const [hasScrolled, setHasScrolled] = useState(false)
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -16,7 +18,7 @@ function Header(): ReactElement {
   const handleScroll = () => setHasScrolled(window.pageYOffset > 10)
 
   return (
-    <Container hasScrolled={hasScrolled}>
+    <Container hasScrolled={hasScrolled} style={props}>
       <ContainerGroup>
         <Logo to='/'>
           <img
@@ -53,7 +55,7 @@ function Header(): ReactElement {
 type ContainerProps = {
   hasScrolled: boolean
 }
-const Container = styled.div`
+const Container = styled(animated.div)`
   position: fixed;
   top: 0;
   left: 0;
