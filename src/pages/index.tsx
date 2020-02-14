@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
 import Typist from 'react-typist'
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 import { Layout, SEO } from '../components'
 
 /* TODO: 
@@ -17,11 +19,11 @@ export default () => {
           <Section>
             <h3 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h3>
             <div className='Hero'>
-              <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-                <GreetingsContainer>
-                  <h1>Hi, I'm Sid</h1>
-                  <h3>Frontend Engineer</h3>
-                  {/* <Typist
+              {/* <CSSTransition classNames='fade' in={true} appear timeout={3000}> */}
+              <GreetingsContainer>
+                <h1>Hi, I'm Sid</h1>
+                <h3>Frontend Engineer</h3>
+                {/* <Typist
                     className='Typist'
                     startDelay={500}
                     cursor={{
@@ -31,21 +33,39 @@ export default () => {
                   >
                     I'm Sid
                   </Typist> */}
-                  {/* <CSSTransition
+                {/* <CSSTransition
                     classNames='fade'
                     in={true}
                     appear
                     timeout={5000}
                   > */}
-                  {/* </CSSTransition> */}
-                </GreetingsContainer>
-              </CSSTransition>
-              <CSSTransition classNames='fade' in={true} appear timeout={3000}>
-                <Image
-                  src={require('../images/illustrations/coding.svg')}
-                  alt=''
-                />
-              </CSSTransition>
+                {/* </CSSTransition> */}
+              </GreetingsContainer>
+              {/* </CSSTransition> */}
+              {/* <CSSTransition classNames='fade' in={true} appear timeout={3000}> */}
+              {/* <StaticQuery
+                query={graphql`
+                  query {
+                    placeholderImage: file(
+                      relativePath: { eq: "sid-the-builder.png" }
+                    ) {
+                      childImageSharp {
+                        fluid(maxWidth: 600) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
+                  }
+                `}
+                render={(data) => (
+                  <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+                )}
+              /> */}
+              <Image
+                src={require('../images/illustrations/coding.svg')}
+                alt=''
+              />
+              {/* </CSSTransition> */}
             </div>
           </Section>
 
