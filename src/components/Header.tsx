@@ -26,16 +26,16 @@ function Header(): ReactElement {
         </Logo>
         <Links isBurgerActive={isBurgerActive} hasScrolled={hasScrolled}>
           <li>
-            <Link to='#intro'>Intro</Link>
+            <a href='#intro'>Intro</a>
           </li>
           <li>
-            <Link to='#tools'>My Tools</Link>
+            <a href='#tools'>My Tools</a>
           </li>
           <li>
-            <Link to='#me'>About me</Link>
+            <a href='#me'>About me</a>
           </li>
           <li>
-            <Link to='#contact'>Contact</Link>
+            <a href='#contact'>Contact</a>
           </li>
         </Links>
         <BurgerWrapper>

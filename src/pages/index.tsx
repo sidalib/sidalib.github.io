@@ -138,7 +138,7 @@ export default () => {
                     for the enormous needs of companies like Facebook,
                     Instagram, Netflix, Airbnb, Microsoft.
                   </p>
-                  <p
+                  <div
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -162,7 +162,7 @@ export default () => {
                         For Native...<strong> React Native!</strong>
                       </li>
                     </ul>
-                  </p>
+                  </div>
                 </SectionDescription>
 
                 <SectionDescription>
