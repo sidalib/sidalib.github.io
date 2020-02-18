@@ -81,6 +81,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {     
     background-color: transparent;
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    background-size: cover;
     background-image: url('${require('../images/background.svg')}'); 
     color: hsla(0, 0%, 0%, 0.8);
     font-family: 'Proxima Nova', Arial, Helvetica, sans-serif, serif;
