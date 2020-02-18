@@ -80,7 +80,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {     
-    background-color: transparent;
+    background-color: #fff;
     background-position: 0px 0px;
     background-repeat: repeat;
     background-size: cover;

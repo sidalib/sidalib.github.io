@@ -21,10 +21,7 @@ function Header(): ReactElement {
     <Container hasScrolled={hasScrolled} style={props}>
       <ContainerGroup>
         <Logo to='/'>
-          <img
-            src={require('../images/sid-logo.png')}
-            alt='Logo de Cap n Beret'
-          />
+          <img src={require('../images/logo.svg')} alt='Logo de Cap n Beret' />
         </Logo>
         <Links isBurgerActive={isBurgerActive} hasScrolled={hasScrolled}>
           <li>
@@ -62,7 +59,7 @@ const Container = styled(animated.div)`
   width: 100%;
   z-index: 100;
   background-color: ${({ hasScrolled }: ContainerProps) =>
-    hasScrolled ? 'rgb(33,43,54, 0.8)' : 'rgba(255, 255, 255, 0.8)'};
+    hasScrolled ? 'rgb(33,43,54, 0.9)' : 'rgba(255, 255, 255, 0.5)'};
   padding: ${({ hasScrolled }: ContainerProps) =>
     hasScrolled ? '0' : '1vh 0'};
   box-shadow: 0px 1px 2px rgba(45, 62, 79, 0.3);
@@ -81,7 +78,7 @@ const ContainerGroup = styled.div`
 const Logo = styled(Link)`
   grid-area: Logo;
   img {
-    max-width: 3em;
+    width: 3.5em;
     margin: 0.6em 1.5em;
   }
 `

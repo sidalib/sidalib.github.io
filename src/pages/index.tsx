@@ -16,7 +16,6 @@ export default () => {
       <Layout>
         <Container>
           <Section>
-            <h3 style={{ color: 'red' }}>👷‍♂️ WORK IN PROGRESS 🔨</h3>
             <div className='Hero'>
               {/* <CSSTransition classNames='fade' in={true} appear timeout={3000}> */}
               <GreetingsContainer>

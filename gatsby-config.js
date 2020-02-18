@@ -21,10 +21,10 @@ module.exports = {
         name: `sid-bentifraouine-website`,
         short_name: `sid`,
         start_url: `/`,
-        background_color: `#6B212F`,
-        theme_color: `#6B212F`,
+        background_color: `#102635`,
+        theme_color: `#102635`,
         display: `minimal-ui`,
-        icon: `src/images/sid-logo.png` // This path is relative to the root of the site.
+        icon: `src/images/logo.svg` // This path is relative to the root of the site.
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
