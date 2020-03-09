@@ -44,16 +44,7 @@ module.exports = {
       resolve: 'gatsby-theme-mdx-deck',
       options: {
         contentPath: './src/decks',
-        basePath: '/decks',
-        mdx: false
-      }
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/mdx/MDXLayout.tsx`)
-        }
+        basePath: '/decks'
       }
     }
   ]

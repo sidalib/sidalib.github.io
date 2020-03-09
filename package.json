@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Sid Bentifraouine <sidbentifraouien@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.18",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-manifest": "^2.2.34",
@@ -19,7 +18,6 @@
     "gatsby-theme-mdx-deck": "^3.0.13",
     "gatsby-transformer-sharp": "^2.3.9",
     "mdx-deck": "^3.0.13",
-    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
@@ -33,12 +31,14 @@
     "@types/react-helmet": "^5.0.15",
     "@types/react-transition-group": "^4.2.3",
     "@types/react-typist": "^2.0.1",
+    "prop-types": "^15.7.2",
     "@types/styled-components": "^4.4.2",
     "gh-pages": "^2.2.0",
     "prettier": "^1.19.1",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.4",
+    "babel-plugin-styled-components": "^1.10.6"
   },
   "keywords": [
     "gatsby"
