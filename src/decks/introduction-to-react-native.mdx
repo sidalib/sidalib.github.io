@@ -1,14 +1,16 @@
-# ⚛️Intro to React Native
+import rn from '../images/decks/uphf-mobile-apps-dev/rn.png'
+
+# ⚛️ Intro to React Native
 
 ---
 
 ## 🤷‍♀️ What is it
 
-[React](https://facebook.github.io/react-native/) lets you create native apps for:
+[React Native](https://facebook.github.io/react-native/) lets you create apps for:
 
 - Android
 - iOS
-- Even Web
+- Web (bonus ! 🤩)
 
 ---
 
@@ -24,8 +26,8 @@ Facebook
 - Tesla
 - Facebook
 - Instagram
-- Wallmart
 - Discord
+- and more…
 
 ---
 
@@ -33,25 +35,97 @@ Facebook
 
 "Learn once, write anywhere."
 
-Instead of sharing the same codebase, you share the same principles
+Share principles, not codebase.
 
 ---
 
-### 💥 Extend you tooling
+### ⚛️ What is React Native
+
+- Built using React
+- Build cross patform apps using JavaScript
+- Target not only iOS & Android, but also Apple TV, VR, AR, Windows, & Desktop
+- Real world projects typically see 80%-95% code reuse
+
+---
+
+### Why React Native
+
+- Fast development speed
+- Low development cost
+  - Code reuse
+  - Easier to find developpers
+- Ship across multiple platforms
+- Over-the-Air updates
+
+---
+
+### How React Native works
+
+- JavaScript is bundled and minified using Babel (built-in)
+- Separate threads for UI, Layout, and JavaScript
+- Threads communicate asynchronously through native bridge
+
+---
+
+<img src={rn} style='width:auto; height:100%' />
+
+---
+
+### UI Primitives
+
+tldr; A shit load.
+
+You just need to import them.
+
+```javascript
+import { View, Text } from 'react-native'
+```
+
+---
+
+### UI Primitives mapping (Web)
+
+- View == div
+- Text == span
+- ScrollView == styled div
+- Image == img
+- TextInput == input
+- …
+
+---
+
+### Device API's
+
+- CameraRoll
+- Keyboard
+- NetInfo
+- Vibration
+- …
+
+---
+
+### 💥 Extend your tooling
 
 Use [Expo](https://docs.expo.io/versions/latest/)
 
+---
+
 ### 🤷‍♀️ What is Expo
 
-- Framework and a platform for universal React applications
-- Brings a set of tools built around React Native and native platforms
-  - Helps you develop, build, deploy, and quickly iterate
+- Framework and a platform for universal RN apps.
+- Brings a set of tools built around RN and native platforms
+- Helps us to:
+  - Develop
+  - Build
+  - Deploy
+  - Quickly
 
 ---
 
 ### 🤷‍♀️ What is Expo
 
-- Expo pushes to realize the “Write once, run anywhere” dream
+tldr; Expo pushes to realize the “Write once, run anywhere” dream
+
 - Avoid touching native code, just write React
 - No need for configuration when using lower level APIs
 - Gives an abstraction around specic platform behaviours
@@ -60,7 +134,7 @@ Use [Expo](https://docs.expo.io/versions/latest/)
 
 ### 🧰 Setup
 
-- Install [NodeJS](https://nodejs.org/en/)
+- Install [NodeJS](https://nodejs.org/en/) or `nvm` (recommended)
 - Install [VSCode](https://code.visualstudio.com/) or any other editor
 - Create your app with [Expo](https://docs.expo.io/versions/v36.0.0/get-started/create-a-new-app/)
 - You're ready to go!
@@ -99,7 +173,7 @@ It's Web vs Native
 - **Style & Layout**: Native Platform mapped to their target platform equivalent
   - View: Android `View` & iOS `UIView`
   - Text: Android `TextView` & iOS `UITextField`
-  - ...
+  - …etc…
 - **Logic**: JavaScript with React.js
 
 ---
@@ -113,9 +187,7 @@ It's Web vs Native
 
 ---
 
-### 📱 Layout
-
-Everything is a Component
+### 📱Components
 
 - [Icons](https://docs.expo.io/versions/v36.0.0/guides/icons/)
 - [Handling TextInput](https://docs.expo.io/versions/latest/react-native/handling-text-input/)
@@ -163,3 +235,5 @@ Everything is a Component
 # ⌨️ Demo
 
 ---
+
+# 🙏 Thank you
