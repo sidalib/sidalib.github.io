@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Sid Bentifraouine's Website`,
     description: `Get to know me better with this website`,
-    author: `sidbentifraouine@gmail.com`
+    author: `sidbentifraouine@gmail.com`,
+    siteUrl: `https://www.sidbentifraouine.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,6 +46,13 @@ module.exports = {
       options: {
         contentPath: './src/decks',
         basePath: '/decks'
+      }
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.sidbentifraouine.com`
       }
     }
   ]
