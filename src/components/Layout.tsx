@@ -7,14 +7,11 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { useSpring, animated } from 'react-spring'
 import Header from './Header'
 import Footer from './Footer'
 
 type Props = { children: JSX.Element | JSX.Element[] }
 export default function Layout({ children }: Props) {
-  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
-
   return (
     <StaticQuery
       query={graphql`
@@ -30,9 +27,9 @@ export default function Layout({ children }: Props) {
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <Header />
-          <Container style={props}>
+          <Container>
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </Container>
         </ThemeProvider>
       )}
@@ -40,7 +37,7 @@ export default function Layout({ children }: Props) {
   )
 }
 
-const Container = styled(animated.div)`
+const Container = styled.div`
   padding: 0;
 `
 
@@ -55,24 +52,13 @@ const theme = {
   yellow: '#EEC200',
   borderRadius: '4px'
 }
+
 Object.assign(theme, {
   boxShadowLight: `0 -1px 2px 0px ${theme.primary}`
 })
 
 const GlobalStyle = createGlobalStyle`
-  @import '~react-typist/dist/Typist.css';
-
-  @font-face {
-    font-family: BrandonGrotesqueMedium;
-    src: url(${require('../fonts/brandon-grotesque/brandon-med.otf')});
-  }
-
-  @font-face {
-    font-family: MontserratMedium;
-    src: url(${require('../fonts/montserrat/montserrat-medium.ttf')});
-  }
-
-  html {
+   html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -82,11 +68,8 @@ const GlobalStyle = createGlobalStyle`
   body {     
     background-color: #fff;
     background-position: 0px 0px;
-    background-repeat: repeat;
-    background-size: cover;
-    background-image: url('${require('../images/background.svg')}'); 
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: 'Proxima Nova', Arial, Helvetica, sans-serif, serif;
+    font-family: Montserrat, Arial, Helvetica, sans-serif, serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -94,6 +77,8 @@ const GlobalStyle = createGlobalStyle`
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+    padding: 0;
+    margin: 0;
   }
 
   article,
@@ -454,7 +439,7 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.45rem;
   }
   p, a {
-    font-family: MontserratMedium, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
